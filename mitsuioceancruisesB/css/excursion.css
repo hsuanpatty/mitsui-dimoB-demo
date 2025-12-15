@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+  font-family: 'GenKiMin-R';
+  src: url('../fonts/GenKiMin2PJP-R.otf') format("truetype");
+}
+
+
+:root{
+
+    --spanish-gray: hsl(0, 0%, 60%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --mitsui-blue: #005396;
+    --deck-blue: #083050;
+    --m2-blue: #005396;
+    --m3-blue: #0967b4;
+    --sandy-brown: hsl(29, 90%, 65%);
+    --bittersweet: hsl(0, 100%, 70%);
+    --mitsui-red: #EB4343;
+    --mitsui-red2: #FF0707;
+    --ocean-green: hsl(152, 51%, 52%);
+    --davys-gray: hsl(0, 0%, 33%);
+    --cultured: hsl(0, 0%, 93%);
+    --white: hsl(0, 100%, 100%);
+    --onyx: hsl(0, 0%, 27%);
+    --brown: #D7C5AE;
+    --dreck-gray: #F9F9F9;
+    --search-blue: #F2F6FA;
+    --beige: #FFE9CD;
+
+    --fs-1: 1.563rem;
+    --fs-2: 1.375rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
+    --fs-6: .938rem;
+    --fs-7: .875rem;
+    --fs-8: .813rem;
+    --fs-9: .75rem;
+    --fs-10: .688rem;
+    --fs-11: .625rem;
+
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+
+    --border-radius-medium: 10px;
+    --border-radius-small: 5px;
+
+    --transition-timing: .2s ease;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button{
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+a { text-decoration: none; }
+
+p,
+h2,
+h3,
+h4,
+h5,
+li,
+section,
+header{
+  font-family: 'GenKiMin-R';
+  letter-spacing: 1px;
+}
+
+
+img, svg, button, a { display: block; }
+
+span { display: inline-block; }
+
+html {
+    font-family: "Poppins", sans-serif;
+    overscroll-behavior: contain;
+}
+
+input{
+    display: block;
+    width: 100%;
+    font: inherit;
+}
+
+
+/* =======================
+   通用 Container
+======================= */
+.container,
+.modal-content-box,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* 小於 576px（手機） */
+@media (max-width: 575.98px) {
+    .container,
+    .modal-content,
+    .container-sm {
+        max-width: 100%;
+    }
+}
+
+/* ≥576px */
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-content-box     {
+         max-width: 600px;
+    }
+}
+
+
+/* ≥768px */
+@media (min-width: 768px) {
+    .container,
+    .modal-content-box,
+    .container-md {
+        max-width: 750px;
+    }
+}
+
+/* ≥992px */
+@media (min-width: 992px) {
+    .container,
+    .modal-content-box,
+    .container-lg {
+        max-width: 960px;
+    }
+}
+
+/* ≥1200px */
+@media (min-width: 1200px) {
+    .container,
+    .modal-content-box,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+/* ≥1400px */
+@media (min-width: 1400px) {
+    .container,
+    .modal-content-box,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+/* ≥1600px，可自行擴展 */
+@media (min-width: 1600px) {
+    .container,
+    .modal-content-box,
+    .container-3xl {
+        max-width: 1600px;
+    }
+}
+
+
+.row,
+.modal-row {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(var(--bs-gutter-y) * -1);
+	margin-right: calc(var(--bs-gutter-x) * -0.5);
+	margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.modal-row {
+  align-items: flex-start !important;
+}
+
+
+/* 郵輪航程搜尋 */
+.earch-p {
+  padding: 40px 0;
+}
+
+.cruise-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  background: var(--search-blue);
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.cruise-form__item label {
+  text-align: right;
+  color: var(--m2-blue);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+.cruise-form__item select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* 移除原生箭頭 */
+  width: 100%;
+  cursor: pointer;
+}
+
+.cruise-form__item {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  gap: 8px;
+  position: relative; 
+}
+
+.cruise-form__item::after {
+  content: "\f0d7"; 
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--eerie-black);
+  font-size: 14px;
+}
+
+.seach-1 {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit {
+  padding: 14px 40px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--m2-blue);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.port-title .op-title {
+  font-family: 'GenKiMin-R';
+  font-size: 15px;
+  letter-spacing: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .cruise-form {
+    width: 1380px;
+    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .ship-1,
+  .port-1,
+  .area-1,
+  .month-1 {
+    grid-column: span 1;
+  }
+  .seach-1 {
+    grid-column: span 1; 
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cruise-form {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .ship-1,
+  .port-1,
+  .area-1,
+  .month-1 {
+    grid-column: span 1;
+  }
+  .seach-1 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .cruise-form {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .ship-1 { grid-column: span 2; }
+  .port-1 { grid-column: span 2; }
+  .area-1 { grid-column: span 2; }
+  .month-1 { grid-column: span 2; }
+
+  .seach-1 {
+    grid-column: 5 / 7;  
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cruise-form__item label {
+    text-align: left;
+  }
+}
+
+@media (max-width: 797.98px){
+  .cruise-form {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .ship-1 { grid-column: span 3; }
+  .port-1 { grid-column: span 3; }
+  .area-1 { grid-column: span 3; }
+  .month-1 { grid-column: span 3; }
+
+  .seach-1 {
+   grid-column: span 6;
+  }
+  .cruise-form__item label {
+    text-align: left;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cruise-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ship-1,
+  .port-1,
+  .area-1,
+  .month-1,
+  .seach-1 {
+    grid-column: span 2;
+  }
+  .cruise-form__item {
+    grid-template-columns: 1fr;
+  }
+  .cruise-form__item label {
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  .btn-submit {
+    width: 100%;  
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cruise-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ship-1,
+  .port-1,
+  .area-1,
+  .month-1,
+  .seach-1 {
+    grid-column: span 2;
+  }
+
+  .earch-p {
+    padding: 20px 0;
+  }
+
+  .cruise-form__item::after {
+    top: 70%;
+  }
+}
+
+/* 郵輪 以下行程 */
+.cruise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  margin: auto;
+  justify-content: center;
+}
+
+@media (min-width: 1400px) {
+  .cruise-grid {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1399.98px) { 
+  .cruise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 797.98px) { 
+  .cruise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .cruise-grid {
+      grid-template-columns: 1fr;
+      padding: 0 15px;
+  }
+
+}
+
+.cruise-card {
+  background-color: var(--mitsui-blue);
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  cursor: pointer;
+}
+
+.cruise-card:hover {
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.cruise-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cruise-image-wrapper img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cruise-card:hover .cruise-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.cruise-new {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.932);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+
+.cruise-new .discount {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--mitsui-red2);
+}
+
+.cruise-info {
+  padding: 15px 1.5rem 18px;
+}
+
+.cruise-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  letter-spacing: 0.1rem;
+}
+
+.cruise-info p {
+  font-size: 0.875rem;
+  color:  var(--beige);
+  margin: 0;
+
+  text-align: center;
+}
+
+@media (min-width: 1400px) {
+  .cruise-image-wrapper img {
+    height: 12rem;
+  }
+
+  .cruise-info h3 {
+    font-size: 1.1rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .cruise-info {
+    padding: 15px 0.8rem 18px;
+  }
+
+  .cruise-info p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 郵輪航程 頁數 */
+.page_box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0 20px;
+  color: #959696;
+}
+.page_box .page_num {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  margin: 0 5px;
+  text-decoration: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+}
+.page_box .fa-caret-left {
+  padding-right: 5px;
+}
+
+.page_box .fa-caret-right {
+  padding-left: 5px;
+}
+
+.page_box .page_num.active, .page_box .page_num:hover {
+  background: #555555;
+  color: #fff;
+}
+
+.page_box .page_num.page_arrow {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.page_box .page_num.page_arrow:hover {
+  background: #ccc;
+  color: #fff;
+}
+
+.page_box .page_num.page_arrow .fa-backward-step, .page_box .page_num.page_arrow .fa-forward-step {
+  font-size: 15px;
+}
+
+.page_box .page_dot {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  margin: 0 3px;
+}
+
+.page_box .page_select {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.page_box .page_select .num_input {
+  border: 1px solid #cfcfcf;
+  width: 40px;
+  height: 30px;
+  padding: 3px 5px;
+}
+
+
+#goTop {
+  background-image: url(../images/top.png);
+  display: none;            
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 99rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+#goTop:hover {
+  opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+  #goTop {
+    bottom: 65px;
+    right: 10px;
+    opacity: 0.9;
+  } 
+}
