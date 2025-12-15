@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>三井海洋郵輪 MITSUI OCEAN FUJI｜巨匠旅遊</title>
+    <title>三井海洋郵輪 MITSUI OCEAN FUJI</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <meta
       name="description"
@@ -15,9 +15,9 @@
     />
 
     <!-- open graph  -->
-    <meta property="og:site_name" content="三井海洋郵輪｜巨匠旅遊" />
+    <meta property="og:site_name" content="三井海洋郵輪" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="三井海洋郵輪 MITSUI OCEAN FUJI｜巨匠旅遊" />
+    <meta property="og:title" content="三井海洋郵輪 MITSUI OCEAN FUJI" />
     <meta
       name="og:description"
       content="三井海洋富士號｜台灣旅客好評如潮！船艙、餐廳、休閒空間寬敞舒適～服務貼心細緻，享受賓至如歸的款待。探索秘境跳島，實現精彩海上假期!"
@@ -52,11 +52,15 @@
     <nav class="desktop-navigation-menu">
       <div class="container">
         <ul class="desktop-menu-category-list">
-          <li class="menu-category"><a href="./mitsuioceancruises.html" class="menu-title">Home</a></li>
+          <li class="menu-category">
+            <a href="./mitsuioceancruises.html" class="menu-title">Home</a>
+          </li>
           <li class="menu-category">
             <a href="#" class="menu-title">船介紹 <i class="fa-solid fa-angle-down fa-xs"></i></a>
             <ul class="dropdown-list">
-              <li class="dropdown-item"><a href="./onboard.html">三井海洋富士號</a></li>
+              <li class="dropdown-item">
+                <a href="./onboard.html">三井海洋富士號</a>
+              </li>
               <li class="dropdown-item"><a href="#">2026郵輪</a></li>
             </ul>
           </li>
@@ -167,20 +171,43 @@
 
     <!-- 手機底部導航 -->
     <div class="mobile-bottom-navigation">
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
+      <!-- menu 按鈕 -->
+      <button class="action-btn menu-outline" data-mobile-menu-open-btn>
+        <svg viewBox="0 0 512 512" width="26" height="26">
+          <path d="M80 160h352M80 256h352M80 352h352" stroke="currentColor" stroke-width="32" fill="none" stroke-linecap="round" />
+        </svg>
       </button>
-      <a href="./mitsuioceancruises.html" class="action-btn">
-        <ion-icon name="home-outline"></ion-icon>
+
+      <!-- home 按鈕 -->
+      <a href="./mitsuioceancruises.html" class="action-btn home-outline">
+        <svg viewBox="0 0 512 512" width="26" height="26">
+          <path
+            d="M80 212L256 64l176 148v236a20 20 0 0 1-20 20H100a20 20 0 0 1-20-20V212z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="32"
+            stroke-linejoin="round"
+          />
+          <path d="M192 448V288h128v160" fill="none" stroke="currentColor" stroke-width="32" stroke-linejoin="round" />
+        </svg>
       </a>
     </div>
+
+    <div class="mobile-menu-overlay"></div>
 
     <!-- 手機側邊菜單 -->
     <nav class="mobile-navigation-menu" data-mobile-menu>
       <div class="menu-top">
         <h2 class="menu-title">三井海洋郵輪</h2>
-        <button class="menu-close-btn" data-mobile-menu-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
+        <button class="menu-close-btn" data-mobile-menu-close-btn aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+            <path
+              d="M400 145.49L366.51 112 256 222.51
+                 145.49 112 112 145.49 222.51 256
+                 112 366.51 145.49 400 256 289.49
+                 366.51 400 400 366.51 289.49 256z"
+            />
+          </svg>
         </button>
       </div>
       <ul class="mobile-menu-category-list">
@@ -188,12 +215,20 @@
           <button class="accordion-menu" data-accordion-btn>
             <p class="menu-title">船介紹</p>
             <div class="caret-btn">
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              <svg class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="none">
+                <path d="M256 112v288M112 256h288" stroke="currentColor" stroke-width="48" stroke-linecap="round" />
+              </svg>
+
+              <!-- − -->
+              <svg class="remove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="none">
+                <path d="M112 256h288" stroke="currentColor" stroke-width="48" stroke-linecap="round" />
+              </svg>
             </div>
           </button>
           <ul class="submenu-category-list">
-            <li class="submenu-category"><a href="./onboard.html">三井海洋富士號</a></li>
+            <li class="submenu-category">
+              <a href="./onboard.html">三井海洋富士號</a>
+            </li>
             <li class="submenu-category"><a href="#">2026郵輪</a></li>
           </ul>
         </li>
@@ -839,7 +874,7 @@
 
                     <img class="lazyload" data-src="./images/restaurant/img-index-22.webp" alt="三井海洋廣場" />
 
-                    <img class="lazyload" data-src="../images/restaurant/img-index-23.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/restaurant/img-index-23.webp" alt="三井海洋廣場" />
                   </div>
                 </div>
               </div>
@@ -2091,21 +2126,25 @@
       <div class="footer-nav">
         <div class="container">
           <div class="footer-nav-list mitsul-logo-2">
-            <img src="./images/mitsul-logo-2.png" alt="MITSUI OCEAN FUJI" />
+            <img src="./images/mitsul-logo-2.png" alt="MITSUI OCEAN CRUISES" />
           </div>
 
           <ul class="footer-nav-list footer-px">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">凱旋旅行社股份有限公司(凱旋家族)</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">綜合旅行社｜交觀綜字第2133號</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">典華旅行社股份有限公司(典藏旅遊)</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">甲種旅行社｜品保北1795號 | 交觀甲7208號</a></li>
-          </ul>
-
-          <ul class="footer-nav-list footer-px">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">代表人：項國棟 / 聯絡人：彭宗裕</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">台北市中山區南京東路三段101號12樓</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Tel：(02)2506-2677 Fax：(02)2502-8578</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">E-Mail：info@luxetravel.com.tw</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">三井海洋郵輪 台灣總代理</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">TEL： (02)2509-0838</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">FAX：(02)2518-5488</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">E-mail：judyyu@luxetravel.com.tw</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">10487台北市中山區南京東路三段101號9樓</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -2136,11 +2175,5 @@
     <script src="./js/modal.js"></script>
     <script src="./js/script2.js"></script>
     <script src="./js/theme2.js"></script>
-
-    <!-- icon -->
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> -->
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="./js/ionicons.esm.js"></script>
-    <!-- <script nomodule src="./js/ionicons.js"></script> -->
   </body>
 </html>
