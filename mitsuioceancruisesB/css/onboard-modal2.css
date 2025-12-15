@@ -1056,7 +1056,7 @@ input{
     
     box-sizing: border-box;      /* 包含邊框在內計算寬高 */
     padding-bottom: 0;
-    padding-left: 2px;
+    padding-left: 1px;
     transition: transform 0.3s ease;
 }
 
@@ -1145,10 +1145,11 @@ input{
     margin: auto;
   }
 
-  .mitsui-faq-question,
-  .mitsui-faq-item.active .faq-answer {
+    .mitsui-faq-question,
+  .faq-answer {
     width: 90%;
     margin: auto;
+    box-sizing: border-box;
   }
 }
 
