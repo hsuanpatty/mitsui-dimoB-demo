@@ -649,6 +649,18 @@ section {
    section {
     padding: 0 0 20px;
   }
+
+   .mainVisual__brand {
+    padding: 30px 0 0 ;
+  }
+
+  .footprints {
+    padding-bottom: 20px;
+  }
+
+  .bento-card h2 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 332.98px) { 
@@ -953,12 +965,16 @@ section {
 @media (max-width: 767.98px) {
 
   .mileage_box {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     margin-bottom: 30px;
   }
 
   .space-y-3 {
     padding-right: 0;
+  }
+
+  .ach-item {
+    padding: 0.6rem 0;
   }
 }
 
