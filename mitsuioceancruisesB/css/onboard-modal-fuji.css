@@ -1432,7 +1432,7 @@ input{
 .vessel-material {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 5rem;
+  column-gap: 3rem;
   row-gap: 1rem;
   align-items: center;
 }
