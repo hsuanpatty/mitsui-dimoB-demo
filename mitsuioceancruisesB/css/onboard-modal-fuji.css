@@ -377,6 +377,20 @@ input{
   }
 }
 
+@media (max-width: 1299.98px) { 
+  .modal__inner {
+    height: 85vh;         
+    max-height: 85vh;
+  }
+}
+
+
+@media (max-width: 1299.98px) { 
+ .border-title2 {
+   padding-bottom: 10px;
+ }
+}
+
 
 @media (max-width: 575.98px) {
   .modal-row p {
@@ -414,7 +428,7 @@ input{
 }
 
 .modal-content-box {
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
   .modal-row {
