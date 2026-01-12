@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/onboard-modal2.css" />
+    <link rel="stylesheet" href="./css/onboard-modal-fuji.css" />
 
     <link rel="stylesheet" href="./css/fonts.css" />
 
@@ -44,7 +44,7 @@
     <!-- 主導航區塊 -->
     <nav class="header-main">
       <div class="container">
-        <a href="#" class="header-logo"><img src="./images/mitsul-logo.png" alt="MITSUI OCEAN FUJI" /></a>
+        <a href="#" class="header-logo"><img src="./images/logo/mitsul-fuji-logo.png" alt="MITSUI OCEAN FUJI" /></a>
       </div>
     </nav>
 
@@ -59,9 +59,9 @@
             <a href="#" class="menu-title">船介紹 <i class="fa-solid fa-angle-down fa-xs"></i></a>
             <ul class="dropdown-list">
               <li class="dropdown-item">
-                <a href="./onboard.html">三井海洋富士號</a>
+                <a href="./onboard-fuji.html">三井海洋富士號</a>
               </li>
-              <li class="dropdown-item"><a href="#">2026郵輪</a></li>
+              <li class="dropdown-item"><a href="./onboard-sakura.html">三井海洋櫻花號</a></li>
             </ul>
           </li>
           <li class="menu-category">
@@ -80,8 +80,8 @@
           <!-- 1. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm1.jpg" class="w-100 d-block" width="575" alt="鬱金香(荷蘭)" />
-              <img src="./images/mitsui-banner1.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm1.jpg" class="w-100 d-block" width="575" alt="鬱金香(荷蘭)" />
+              <img src="./images/fuji/mitsui-banner1.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -91,8 +91,8 @@
           <!-- 2. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm2.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner2.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm2.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner2.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -102,8 +102,8 @@
           <!-- 3. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm3.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner3.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm3.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner3.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -113,8 +113,8 @@
           <!-- 4. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm4.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner4.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm4.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner4.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -124,8 +124,8 @@
           <!-- 5. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm5.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner5.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm5.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner5.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -135,8 +135,8 @@
           <!-- 6. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm6.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner6.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm6.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner6.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -146,8 +146,8 @@
           <!-- 7. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm7.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner7.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm7.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner7.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -157,8 +157,8 @@
           <!-- 8. -->
           <div class="banner_title">
             <picture>
-              <source media="(max-width: 575px)" srcset="./images/mitsui-banner-sm8.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
-              <img src="./images/mitsui-banner8.jpg" class="carousel__images" alt="三井海洋郵輪" />
+              <source media="(max-width: 575px)" srcset="./images/fuji/mitsui-banner-sm8.jpg" class="w-100 d-block" width="575" alt="三井海洋郵輪" />
+              <img src="./images/fuji/mitsui-banner8.jpg" class="carousel__images" alt="三井海洋郵輪" />
             </picture>
 
             <div class="swiper-slide-caption">
@@ -198,7 +198,7 @@
     <!-- 手機側邊菜單 -->
     <nav class="mobile-navigation-menu" data-mobile-menu>
       <div class="menu-top">
-        <h2 class="menu-title">三井海洋郵輪</h2>
+        <a href="./mitsuioceancruises.html"><h2 class="menu-title">三井海洋郵輪</h2></a>
         <button class="menu-close-btn" data-mobile-menu-close-btn aria-label="Close menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
             <path
@@ -227,9 +227,9 @@
           </button>
           <ul class="submenu-category-list">
             <li class="submenu-category">
-              <a href="./onboard.html">三井海洋富士號</a>
+              <a href="./onboard-fuji.html">三井海洋富士號</a>
             </li>
-            <li class="submenu-category"><a href="#">2026郵輪</a></li>
+            <li class="submenu-category"><a href="./onboard-sakura.html">三井海洋櫻花號</a></li>
           </ul>
         </li>
         <li class="menu-category">
@@ -263,9 +263,9 @@
                   <div class="top-cruise-panel-cruiseShip__item">
                     <div class="top-cruise-panel-cruiseShip__media">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="./images/onboard-1.jpg" width="1344" height="350" />
+                        <source media="(min-width: 768px)" srcset="./images/fuji/onboard-1.jpg" width="1344" height="350" />
                         <img
-                          src="./images/onboard-sm1.jpg"
+                          src="./images/fuji/onboard-sm1.jpg"
                           alt="三井海洋富士號"
                           class="top-panel-cruiseShip__mediaItem"
                           width="703"
@@ -292,8 +292,15 @@
                   <div class="top-cruise-panel-cruiseShip__item">
                     <div class="top-cruise-panel-cruiseShip__media">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="./images/onboard-2.jpg" width="1344" height="350" />
-                        <img src="./images/onboard-sm2.jpg" alt="2026遊輪" class="top-panel-cruiseShip__mediaItem" width="703" height="471" loading="lazy" />
+                        <source media="(min-width: 768px)" srcset="./images/fuji/onboard-2.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/fuji/onboard-sm2.jpg"
+                          alt="2026遊輪"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
                       </picture>
                     </div>
                     <div class="top-cruise-panel-cruiseShip__overlay">
@@ -314,8 +321,15 @@
                   <div class="top-cruise-panel-cruiseShip__item">
                     <div class="top-cruise-panel-cruiseShip__media">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="./images/onboard-3.jpg" width="1344" height="350" />
-                        <img src="./images/onboard-sm3.jpg" alt="2026遊輪" class="top-panel-cruiseShip__mediaItem" width="703" height="471" loading="lazy" />
+                        <source media="(min-width: 768px)" srcset="./images/fuji/onboard-3.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/fuji/onboard-sm3.jpg"
+                          alt="2026遊輪"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
                       </picture>
                     </div>
                     <div class="top-cruise-panel-cruiseShip__overlay">
@@ -336,8 +350,15 @@
                   <div class="top-cruise-panel-cruiseShip__item">
                     <div class="top-cruise-panel-cruiseShip__media">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="./images/onboard-4.jpg" width="1344" height="350" />
-                        <img src="./images/onboard-sm4.jpg" alt="2026遊輪" class="top-panel-cruiseShip__mediaItem" width="703" height="471" loading="lazy" />
+                        <source media="(min-width: 768px)" srcset="./images/fuji/onboard-4.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/fuji/onboard-sm4.jpg"
+                          alt="2026遊輪"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
                       </picture>
                     </div>
                     <div class="top-cruise-panel-cruiseShip__overlay">
@@ -358,8 +379,15 @@
                   <div class="top-cruise-panel-cruiseShip__item">
                     <div class="top-cruise-panel-cruiseShip__media">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="./images/onboard-5.jpg" width="1344" height="350" />
-                        <img src="./images/onboard-sm5.jpg" alt="2026遊輪" class="top-panel-cruiseShip__mediaItem" width="703" height="471" loading="lazy" />
+                        <source media="(min-width: 768px)" srcset="./images/fuji/onboard-5.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/fuji/onboard-sm5.jpg"
+                          alt="2026遊輪"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
                       </picture>
                     </div>
                     <div class="top-cruise-panel-cruiseShip__overlay">
@@ -399,139 +427,211 @@
               <!-- Content -->
               <div class="details-wrapper">
                 <div class="details active" id="deck-1">
-                  <img src="./images/deck/deck-1.png" alt="甲板 04." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-1.png" alt="甲板 04." class="dex-img" />
 
                   <div class="deck-grid">
                     <div class="">
-                      <img src="./images/deck/deck-2.jpg" alt="富士餐廳" />
+                      <img src="./images/fuji/deck/deck-2.jpg" alt="富士餐廳" />
                       <h4>富士餐廳</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-2">
-                  <img src="./images/deck/deck-4.png" alt="甲板 05." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-4.png" alt="甲板 05." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-5.jpg" alt="海洋俱樂部" />
+                      <img src="./images/fuji/deck/deck-5.jpg" alt="海洋俱樂部" />
                       <h4>海洋俱樂部</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-6.jpg" alt="海洋賭場" />
+                      <img src="./images/fuji/deck/deck-6.jpg" alt="海洋賭場" />
                       <h4>海洋賭場</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-7.jpg" alt="蔚藍泳池" />
+                      <img src="./images/fuji/deck/deck-7.jpg" alt="蔚藍泳池" />
                       <h4>蔚藍泳池</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-3">
-                  <img src="./images/deck/deck-8.png" alt="甲板 06." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-8.png" alt="甲板 06." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-9.jpg" alt="按摩浴缸" />
+                      <img src="./images/fuji/deck/deck-9.jpg" alt="按摩浴缸" />
                       <h4>按摩浴缸</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-10.jpg" alt="海洋劇場" />
+                      <img src="./images/fuji/deck/deck-10.jpg" alt="海洋劇場" />
                       <h4>海洋劇場</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-4">
-                  <img src="./images/deck/deck-11.png" alt="甲板 07." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-11.png" alt="甲板 07." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-12.jpg" alt="棋牌室" />
+                      <img src="./images/fuji/deck/deck-12.jpg" alt="棋牌室" />
                       <h4>棋牌室</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-13.jpg" alt="海洋精品店" />
+                      <img src="./images/fuji/deck/deck-13.jpg" alt="海洋精品店" />
                       <h4>海洋精品店</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-14.jpg" alt="三井廣場" />
+                      <img src="./images/fuji/deck/deck-14.jpg" alt="三井廣場" />
                       <h4>三井廣場</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-5">
-                  <img src="./images/deck/deck-15.png" alt="甲板 08." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-15.png" alt="甲板 08." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-18.jpg" alt="湖畔泳池" />
+                      <img src="./images/fuji/deck/deck-18.jpg" alt="湖畔泳池" />
                       <h4>湖畔泳池</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-19.jpg" alt="湖畔餐廳" />
+                      <img src="./images/fuji/deck/deck-19.jpg" alt="湖畔餐廳" />
                       <h4>湖畔餐廳</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-17.jpg" alt="北齋高級餐廳" />
+                      <img src="./images/fuji/deck/deck-17.jpg" alt="北齋高級餐廳" />
                       <h4>北齋高級餐廳</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-16.jpg" alt="八葉露臺餐廳" />
+                      <img src="./images/fuji/deck/deck-16.jpg" alt="八葉露臺餐廳" />
                       <h4>八葉露臺餐廳</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-6">
-                  <img src="./images/deck/deck-20.png" alt="甲板 09." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-20.png" alt="甲板 09." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-24.jpg" alt="運動中心" />
+                      <img src="./images/fuji/deck/deck-24.jpg" alt="運動中心" />
                       <h4>運動中心</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-23.jpg" alt="健康中心" />
+                      <img src="./images/fuji/deck/deck-23.jpg" alt="健康中心" />
                       <h4>健康中心</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-21.jpg" alt="沙龍" />
+                      <img src="./images/fuji/deck/deck-21.jpg" alt="沙龍" />
                       <h4>沙龍</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-22.jpg" alt="治療室" />
+                      <img src="./images/fuji/deck/deck-22.jpg" alt="治療室" />
                       <h4>治療室</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-7">
-                  <img src="./images/deck/deck-25.png" alt="甲板 10." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-25.png" alt="甲板 10." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-26.jpg" alt="景觀酒吧36" />
+                      <img src="./images/fuji/deck/deck-26.jpg" alt="景觀酒吧36" />
                       <h4>景觀酒吧36</h4>
                     </div>
                   </div>
                 </div>
 
                 <div class="details" id="deck-8">
-                  <img src="./images/deck/deck-27.png" alt="甲板 11." class="dex-img" />
+                  <img src="./images/fuji/deck/deck-27.png" alt="甲板 11." class="dex-img" />
 
                   <div class="deck-grid">
                     <div>
-                      <img src="./images/deck/deck-28.jpg" alt="日出甲板" />
+                      <img src="./images/fuji/deck/deck-28.jpg" alt="日出甲板" />
                       <h4>日出甲板</h4>
                     </div>
                     <div>
-                      <img src="./images/deck/deck-29.jpg" alt="來光活動區" />
+                      <img src="./images/fuji/deck/deck-29.jpg" alt="來光活動區" />
                       <h4>來光活動區</h4>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 三井海洋富士號-->
+      <section>
+        <div class="container">
+          <div class="row justify-content vessel-box">
+            <div class="col-12 col-md-4 col-xl-5">
+              <img src="./images/fuji/vessel-1.jpg" alt="三井海洋富士號" />
+            </div>
+            <div class="col-12 col-md-8 col-xl-5">
+              <div class="mitsui-title">
+                <h2>MITSUI OCEAN FUJI</h2>
+                <div class="border-title2"></div>
+              </div>
+              <div class="pt-10">
+                <p>
+                  對商船三井而言，睽違 34 年誕生的新船——三井海洋富士號， 其命名源自曾深受無數郵輪旅客喜愛、並於 2013 年退役的「富士丸」，
+                  同時也取意於象徵日本精神的重要存在——富士山。
+                </p>
+                <p>本船由美國頂級奢華郵輪品牌購入後加以改裝，並於 2024 年 12 月正式啟航，展開嶄新的航程。</p>
+                <p>
+                  三井海洋富士號總噸位 32,477 噸，載客人數僅 458
+                  位，是一艘小巧而精緻的郵輪。正因如此，得以造訪大型郵輪難以靠泊、充滿魅力的特色港口，帶來更深入且獨特的航海體驗。
+                </p>
+                <p>船上所有客艙皆面向海洋，從晨曦初現到夕陽西沉，旅客皆可盡覽無垠海平線的變幻之美。</p>
+                <p>船內精心規劃多樣活動，讓旅客親身感受日本傳統文化的深厚底蘊。 同時，也可品味承襲自「日本丸」的匠心美饌，細細體會對食材與料理的極致講究。</p>
+                <p>洗鍊而雅致的室內設計、嚴選和風食材所打造的佳餚， 以及延續逾 140 年的商船三井郵輪傳統服務精神—— 交織融合而成的，正是 三井海洋富士號。</p>
+              </div>
+              <div class="vessel-material">
+                <!-- 1. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">艙房</dt>
+                  <dd class="top-cruise-profile__dd">229間</dd>
+                </div>
+                <!-- 2. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">載客數</dt>
+                  <dd class="top-cruise-profile__dd">458人</dd>
+                </div>
+                <!-- 3. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">長度</dt>
+                  <dd class="top-cruise-profile__dd">198.15米</dd>
+                </div>
+                <!-- 4. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">船寬</dt>
+                  <dd class="top-cruise-profile__dd">25.6米</dd>
+                </div>
+                <!-- 5. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">噸位數</dt>
+                  <dd class="top-cruise-profile__dd">32,447噸</dd>
+                </div>
+                <!-- 6. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">樓層</dt>
+                  <dd class="top-cruise-profile__dd">11層</dd>
+                </div>
+                <!-- 7. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">空間比</dt>
+                  <dd class="top-cruise-profile__dd">71</dd>
+                </div>
+                <!-- 7. -->
+                <div class="top-cruise-profile__description-inner">
+                  <dt class="top-cruise-profile__dt">服務比</dt>
+                  <dd class="top-cruise-profile__dd">1.38</dd>
                 </div>
               </div>
             </div>
@@ -606,19 +706,19 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main1" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index.webp" alt="富士餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index.webp" alt="富士餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-2.webp" alt="富士餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-2.webp" alt="富士餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-3.webp" alt="富士餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-3.webp" alt="富士餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-4.webp" alt="富士餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-4.webp" alt="富士餐廳" />
                     </div>
                   </div>
                 </div>
@@ -636,13 +736,13 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav1 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index.webp" alt="富士餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index.webp" alt="富士餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-2.webp" alt="富士餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-2.webp" alt="富士餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-3.webp" alt="富士餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-3.webp" alt="富士餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-4.webp" alt="富士餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-4.webp" alt="富士餐廳" />
                   </div>
                 </div>
               </div>
@@ -654,23 +754,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main2" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-5.webp" alt="湖畔泳池餐廳＆酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-5.webp" alt="湖畔泳池餐廳＆酒吧" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-6.webp" alt="湖畔泳池餐廳＆酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-6.webp" alt="湖畔泳池餐廳＆酒吧" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-7.webp" alt="湖畔泳池餐廳＆酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-7.webp" alt="湖畔泳池餐廳＆酒吧" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-8.webp" alt="湖畔泳池餐廳＆酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-8.webp" alt="湖畔泳池餐廳＆酒吧" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-9.webp" alt="湖畔泳池餐廳＆酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-9.webp" alt="湖畔泳池餐廳＆酒吧" />
                     </div>
                   </div>
                 </div>
@@ -686,15 +786,15 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav2 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-5.webp" alt="湖畔泳池餐廳＆酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-5.webp" alt="湖畔泳池餐廳＆酒吧" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-6.webp" alt="湖畔泳池餐廳＆酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-6.webp" alt="湖畔泳池餐廳＆酒吧" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-7.webp" alt="湖畔泳池餐廳＆酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-7.webp" alt="湖畔泳池餐廳＆酒吧" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-8.webp" alt="湖畔泳池餐廳＆酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-8.webp" alt="湖畔泳池餐廳＆酒吧" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-9.webp" alt="湖畔泳池餐廳＆酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-9.webp" alt="湖畔泳池餐廳＆酒吧" />
                   </div>
                 </div>
               </div>
@@ -706,23 +806,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main3" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-10.webp" alt="八葉露台餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-10.webp" alt="八葉露台餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-11.webp" alt="八葉露台餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-11.webp" alt="八葉露台餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-12.webp" alt="八葉露台餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-12.webp" alt="八葉露台餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-13.webp" alt="八葉露台餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-13.webp" alt="八葉露台餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-14.webp" alt="八葉露台餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-14.webp" alt="八葉露台餐廳" />
                     </div>
                   </div>
                 </div>
@@ -741,15 +841,15 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav3 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-10.webp" alt="八葉露台餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-10.webp" alt="八葉露台餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-11.webp" alt="八葉露台餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-11.webp" alt="八葉露台餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-12.webp" alt="八葉露台餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-12.webp" alt="八葉露台餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-13.webp" alt="八葉露台餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-13.webp" alt="八葉露台餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-14.webp" alt="八葉露台餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-14.webp" alt="八葉露台餐廳" />
                   </div>
                 </div>
               </div>
@@ -761,15 +861,15 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main4" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-15.webp" alt="北齋高級餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-15.webp" alt="北齋高級餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-16.webp" alt="北齋高級餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-16.webp" alt="北齋高級餐廳" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-17.webp" alt="北齋高級餐廳" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-17.webp" alt="北齋高級餐廳" />
                     </div>
                   </div>
                 </div>
@@ -789,11 +889,11 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav4 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-15.webp" alt="北齋高級餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-15.webp" alt="北齋高級餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-16.webp" alt="北齋高級餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-16.webp" alt="北齋高級餐廳" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-17.webp" alt="北齋高級餐廳" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-17.webp" alt="北齋高級餐廳" />
                   </div>
                 </div>
               </div>
@@ -805,7 +905,7 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main5" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-18.webp" alt="名廚 三國清三" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-18.webp" alt="名廚 三國清三" />
                     </div>
                   </div>
                 </div>
@@ -824,7 +924,7 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav5 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-18.webp" alt="名廚 三國清三" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-18.webp" alt="名廚 三國清三" />
                   </div>
                 </div>
               </div>
@@ -836,23 +936,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main6" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-19.webp" alt="三井海洋廣場" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-19.webp" alt="三井海洋廣場" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-20.webp" alt="三井海洋廣場" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-20.webp" alt="三井海洋廣場" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-21.webp" alt="三井海洋廣場" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-21.webp" alt="三井海洋廣場" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-22.webp" alt="三井海洋廣場" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-22.webp" alt="三井海洋廣場" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-23.webp" alt="三井海洋廣場" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-23.webp" alt="三井海洋廣場" />
                     </div>
                   </div>
                 </div>
@@ -866,15 +966,15 @@
                     <p class="content-p">這是一個舒適的空間，集前台、旅遊諮詢台與圖書館於一體。 我們提供多樣化的菜單，包括特製的金磚蛋糕與可頌等精緻美味。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav6 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-19.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-19.webp" alt="三井海洋廣場" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-20.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-20.webp" alt="三井海洋廣場" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-21.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-21.webp" alt="三井海洋廣場" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-22.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-22.webp" alt="三井海洋廣場" />
 
-                    <img class="lazyload" data-src="./images/restaurant/img-index-23.webp" alt="三井海洋廣場" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-23.webp" alt="三井海洋廣場" />
                   </div>
                 </div>
               </div>
@@ -886,18 +986,18 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main7" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-24.webp" alt="觀景酒吧36" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-24.webp" alt="觀景酒吧36" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-25.webp" alt="觀景酒吧36" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-25.webp" alt="觀景酒吧36" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-26.webp" alt="觀景酒吧36" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-26.webp" alt="觀景酒吧36" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-27.webp" alt="觀景酒吧36" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-27.webp" alt="觀景酒吧36" />
                     </div>
                   </div>
                 </div>
@@ -919,10 +1019,10 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav7 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-24.webp" alt="觀景酒吧36" />
-                    <img class="lazyload" data-src="./images/restaurant/img-index-25.webp" alt="觀景酒吧36" />
-                    <img class="lazyload" data-src="./images/restaurant/img-index-26.webp" alt="觀景酒吧36" />
-                    <img class="lazyload" data-src="./images/restaurant/img-index-27.webp" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-24.webp" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-25.webp" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-26.webp" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-27.webp" alt="觀景酒吧36" />
                   </div>
                 </div>
               </div>
@@ -934,10 +1034,10 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main8" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-28.webp" alt="海洋俱樂部與酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-28.webp" alt="海洋俱樂部與酒吧" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/restaurant/img-index-29.webp" alt="海洋俱樂部與酒吧" />
+                      <img class="lazyload" data-src="./images/fuji/restaurant/img-index-29.webp" alt="海洋俱樂部與酒吧" />
                     </div>
                   </div>
                 </div>
@@ -954,8 +1054,8 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav8 object-fit--contain">
-                    <img class="lazyload" data-src="./images/restaurant/img-index-28.webp" alt="海洋俱樂部與酒吧" />
-                    <img class="lazyload" data-src="./images/restaurant/img-index-29.webp" alt="海洋俱樂部與酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-28.webp" alt="海洋俱樂部與酒吧" />
+                    <img class="lazyload" data-src="./images/fuji/restaurant/img-index-29.webp" alt="海洋俱樂部與酒吧" />
                   </div>
                 </div>
               </div>
@@ -1007,23 +1107,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7 my-auto">
                   <div id="product-slider-main9" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index.webp" alt="三井海洋尊爵套房 " />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index.webp" alt="三井海洋尊爵套房 " />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-2.webp" alt="三井海洋尊爵套房 " />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-2.webp" alt="三井海洋尊爵套房 " />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-3.webp" alt="三井海洋尊爵套房 " />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-3.webp" alt="三井海洋尊爵套房 " />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-4.webp" alt="三井海洋尊爵套房 " />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-4.webp" alt="三井海洋尊爵套房 " />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-5.webp" alt="三井海洋尊爵套房 " />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-5.webp" alt="三井海洋尊爵套房 " />
                     </div>
                   </div>
                 </div>
@@ -1051,15 +1151,15 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav9 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index.webp" alt="三井海洋尊爵套房 " />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index.webp" alt="三井海洋尊爵套房 " />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-2.webp" alt="三井海洋尊爵套房 " />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-2.webp" alt="三井海洋尊爵套房 " />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-3.webp" alt="三井海洋尊爵套房 " />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-3.webp" alt="三井海洋尊爵套房 " />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-4.webp" alt="三井海洋尊爵套房 " />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-4.webp" alt="三井海洋尊爵套房 " />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-5.webp" alt="三井海洋尊爵套房 " />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-5.webp" alt="三井海洋尊爵套房 " />
                   </div>
                 </div>
               </div>
@@ -1071,23 +1171,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main10" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-6.webp" alt="三井經典套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-6.webp" alt="三井經典套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-7.webp" alt="三井經典套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-7.webp" alt="三井經典套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-8.webp" alt="三井經典套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-8.webp" alt="三井經典套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-9.webp" alt="三井經典套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-9.webp" alt="三井經典套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-10.webp" alt="三井經典套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-10.webp" alt="三井經典套房" />
                     </div>
                   </div>
                 </div>
@@ -1114,15 +1214,15 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav10 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-6.webp" alt="三井經典套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-6.webp" alt="三井經典套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-7.webp" alt="三井經典套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-7.webp" alt="三井經典套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-8.webp" alt="三井經典套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-8.webp" alt="三井經典套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-9.webp" alt="三井經典套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-9.webp" alt="三井經典套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-10.webp" alt="三井經典套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-10.webp" alt="三井經典套房" />
                   </div>
                 </div>
               </div>
@@ -1134,23 +1234,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main11" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-11.webp" alt="三井尊榮套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-11.webp" alt="三井尊榮套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-12.webp" alt="三井尊榮套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-12.webp" alt="三井尊榮套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-13.webp" alt="三井尊榮套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-13.webp" alt="三井尊榮套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-14.webp" alt="三井尊榮套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-14.webp" alt="三井尊榮套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-15.webp" alt="三井尊榮套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-15.webp" alt="三井尊榮套房" />
                     </div>
                   </div>
                 </div>
@@ -1173,15 +1273,15 @@
                     <p>共有五間優雅艙房，位於6層與8層甲板前方， 享有絕佳景觀。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav11 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-11.webp" alt="三井尊榮套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-11.webp" alt="三井尊榮套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-12.webp" alt="三井尊榮套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-12.webp" alt="三井尊榮套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-13.webp" alt="三井尊榮套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-13.webp" alt="三井尊榮套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-14.webp" alt="三井尊榮套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-14.webp" alt="三井尊榮套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-15.webp" alt="三井尊榮套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-15.webp" alt="三井尊榮套房" />
                   </div>
                 </div>
               </div>
@@ -1193,23 +1293,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main12" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-16.webp" alt="三井頂級水療套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-16.webp" alt="三井頂級水療套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-17.webp" alt="三井頂級水療套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-17.webp" alt="三井頂級水療套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-18.webp" alt="三井頂級水療套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-18.webp" alt="三井頂級水療套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-19.webp" alt="三井頂級水療套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-19.webp" alt="三井頂級水療套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-20.webp" alt="三井頂級水療套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-20.webp" alt="三井頂級水療套房" />
                     </div>
                   </div>
                 </div>
@@ -1232,15 +1332,15 @@
                     <p>唯一位於船尾的艙房，提供高層甲板的絕佳景觀。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav12 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-16.webp" alt="三井頂級水療套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-16.webp" alt="三井頂級水療套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-17.webp" alt="三井頂級水療套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-17.webp" alt="三井頂級水療套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-18.webp" alt="三井頂級水療套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-18.webp" alt="三井頂級水療套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-19.webp" alt="三井頂級水療套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-19.webp" alt="三井頂級水療套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-20.webp" alt="三井頂級水療套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-20.webp" alt="三井頂級水療套房" />
                   </div>
                 </div>
               </div>
@@ -1252,23 +1352,23 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main13" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-21.webp" alt="三井頂級套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-21.webp" alt="三井頂級套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-22.webp" alt="三井頂級套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-22.webp" alt="三井頂級套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-23.webp" alt="三井頂級套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-23.webp" alt="三井頂級套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-24.webp" alt="三井頂級套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-24.webp" alt="三井頂級套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-25.webp" alt="三井頂級套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-25.webp" alt="三井頂級套房" />
                     </div>
                   </div>
                 </div>
@@ -1294,15 +1394,15 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav13 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-21.webp" alt="三井頂級套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-21.webp" alt="三井頂級套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-22.webp" alt="三井頂級套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-22.webp" alt="三井頂級套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-23.webp" alt="三井頂級套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-23.webp" alt="三井頂級套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-24.webp" alt="三井頂級套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-24.webp" alt="三井頂級套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-25.webp" alt="三井頂級套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-25.webp" alt="三井頂級套房" />
                   </div>
                 </div>
               </div>
@@ -1314,19 +1414,19 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main14" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-26.webp" alt="三井陽台套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-26.webp" alt="三井陽台套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-27.webp" alt="三井陽台套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-27.webp" alt="三井陽台套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-28.webp" alt="三井陽台套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-28.webp" alt="三井陽台套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-29.webp" alt="三井陽台套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-29.webp" alt="三井陽台套房" />
                     </div>
                   </div>
                 </div>
@@ -1347,13 +1447,13 @@
                     <p>艙房都配有私人陽台，讓您盡享千變萬化的美景。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav14 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-26.webp" alt="三井陽台套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-26.webp" alt="三井陽台套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-27.webp" alt="三井陽台套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-27.webp" alt="三井陽台套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-28.webp" alt="三井陽台套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-28.webp" alt="三井陽台套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-29.webp" alt="三井陽台套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-29.webp" alt="三井陽台套房" />
                   </div>
                 </div>
               </div>
@@ -1365,19 +1465,19 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main15" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-30.webp" alt="三井海景套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-30.webp" alt="三井海景套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-31.webp" alt="三井海景套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-31.webp" alt="三井海景套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-32.webp" alt="三井海景套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-32.webp" alt="三井海景套房" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/suite/img-index-33.webp" alt="三井海景套房" />
+                      <img class="lazyload" data-src="./images/fuji/suite/img-index-33.webp" alt="三井海景套房" />
                     </div>
                   </div>
                 </div>
@@ -1398,13 +1498,13 @@
                     <p>艙房設有獨立的客廳與臥室，為您提供舒適愜意的住宿體驗。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav15 object-fit--contain">
-                    <img class="lazyload" data-src="./images/suite/img-index-30.webp" alt="三井海景套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-30.webp" alt="三井海景套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-31.webp" alt="三井海景套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-31.webp" alt="三井海景套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-32.webp" alt="三井海景套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-32.webp" alt="三井海景套房" />
 
-                    <img class="lazyload" data-src="./images/suite/img-index-33.webp" alt="三井海景套房" />
+                    <img class="lazyload" data-src="./images/fuji/suite/img-index-33.webp" alt="三井海景套房" />
                   </div>
                 </div>
               </div>
@@ -1855,7 +1955,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="ent-img">
-                  <img src="./images/ent/img-index.webp" alt="海洋劇場" />
+                  <img src="./images/fuji/ent/img-index.webp" alt="海洋劇場" />
                 </div>
                 <div>
                   <h2>海洋劇場</h2>
@@ -1869,7 +1969,7 @@
               </div>
               <div class="col-12 col-sm-6">
                 <div class="ent-img">
-                  <img src="./images/ent/img-index-2.webp" alt="海洋俱樂部與酒吧" />
+                  <img src="./images/fuji/ent/img-index-2.webp" alt="海洋俱樂部與酒吧" />
                 </div>
                 <div>
                   <h2>海洋俱樂部與酒吧</h2>
@@ -1881,7 +1981,7 @@
               </div>
               <div class="col-12 col-sm-6">
                 <div class="ent-img">
-                  <img src="./images/ent/img-index-3.webp" alt="海洋賭場" />
+                  <img src="./images/fuji/ent/img-index-3.webp" alt="海洋賭場" />
                 </div>
                 <div>
                   <h2>海洋賭場</h2>
@@ -1896,7 +1996,7 @@
               </div>
               <div class="col-12 col-sm-6">
                 <div class="ent-img">
-                  <img src="./images/ent/img-index-7.webp" alt="來光休閒區" />
+                  <img src="./images/fuji/ent/img-index-7.webp" alt="來光休閒區" />
                 </div>
                 <div>
                   <h2>來光休閒區</h2>
@@ -1915,15 +2015,15 @@
                 <div class="col-12 col-sm-6 col-md-7">
                   <div id="product-slider-main16" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/ent/img-index-4.webp" alt="棋牌室" />
+                      <img class="lazyload" data-src="./images/fuji/ent/img-index-4.webp" alt="棋牌室" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/ent/img-index-5.webp" alt="棋牌室" />
+                      <img class="lazyload" data-src="./images/fuji/ent/img-index-5.webp" alt="棋牌室" />
                     </div>
 
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/ent/img-index-6.webp" alt="棋牌室" />
+                      <img class="lazyload" data-src="./images/fuji/ent/img-index-6.webp" alt="棋牌室" />
                     </div>
                   </div>
                 </div>
@@ -1936,11 +2036,11 @@
                     <p class="ent-pt">我們提供圍棋、將棋、桌遊、黑白棋等多種遊戲選擇。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav16 object-fit--contain pt-10">
-                    <img class="lazyload" data-src="./images/ent/img-index-4.webp" alt="棋牌室" />
+                    <img class="lazyload" data-src="./images/fuji/ent/img-index-4.webp" alt="棋牌室" />
 
-                    <img class="lazyload" data-src="./images/ent/img-index-5.webp" alt="棋牌室" />
+                    <img class="lazyload" data-src="./images/fuji/ent/img-index-5.webp" alt="棋牌室" />
 
-                    <img class="lazyload" data-src="./images/ent/img-index-6.webp" alt="棋牌室" />
+                    <img class="lazyload" data-src="./images/fuji/ent/img-index-6.webp" alt="棋牌室" />
                   </div>
                 </div>
               </div>
@@ -1978,16 +2078,16 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main17" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index.webp" alt="木之靈SPA & 健康中心" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index.webp" alt="木之靈SPA & 健康中心" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-2.webp" alt="木之靈SPA & 健康中心" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-2.webp" alt="木之靈SPA & 健康中心" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-3.webp" alt="木之靈SPA & 健康中心" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-3.webp" alt="木之靈SPA & 健康中心" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-4.webp" alt="木之靈SPA & 健康中心" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-4.webp" alt="木之靈SPA & 健康中心" />
                     </div>
                   </div>
                 </div>
@@ -2004,10 +2104,10 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav17 object-fit--contain">
-                    <img class="lazyload" data-src="./images/life/img-index.webp" alt="木之靈SPA & 健康中心" />
-                    <img class="lazyload" data-src="./images/life/img-index-2.webp" alt="木之靈SPA & 健康中心" />
-                    <img class="lazyload" data-src="./images/life/img-index-3.webp" alt="木之靈SPA & 健康中心" />
-                    <img class="lazyload" data-src="./images/life/img-index-4.webp" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index.webp" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-2.webp" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-3.webp" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-4.webp" alt="木之靈SPA & 健康中心" />
                   </div>
                 </div>
               </div>
@@ -2019,13 +2119,13 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main18" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-5.webp" alt="湖畔泳池" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-5.webp" alt="湖畔泳池" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-12.jpg" alt="湖畔泳池" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-12.jpg" alt="湖畔泳池" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-13.jpg" alt="湖畔泳池" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-13.jpg" alt="湖畔泳池" />
                     </div>
                   </div>
                 </div>
@@ -2039,9 +2139,9 @@
                     <p class="content-p">在泳池暢游一番，或躺在甲板椅上放鬆身心。 在這與自然景致融為一體的空間中，隨心享受屬於您的悠閒時光。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav18 object-fit--contain">
-                    <img class="lazyload" data-src="./images/life/img-index-5.webp" alt="湖畔泳池" />
-                    <img class="lazyload" data-src="./images/life/img-index-12.jpg" alt="湖畔泳池" />
-                    <img class="lazyload" data-src="./images/life/img-index-13.jpg" alt="湖畔泳池" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-5.webp" alt="湖畔泳池" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-12.jpg" alt="湖畔泳池" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-13.jpg" alt="湖畔泳池" />
                   </div>
                 </div>
               </div>
@@ -2053,13 +2153,13 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main19" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-6.webp" alt="日出甲板" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-6.webp" alt="日出甲板" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-7.webp" alt="日出甲板" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-7.webp" alt="日出甲板" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-8.webp" alt="日出甲板" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-8.webp" alt="日出甲板" />
                     </div>
                   </div>
                 </div>
@@ -2073,9 +2173,9 @@
                     <p class="content-p">躺在甲板椅上，感受海風的輕拂，沐浴在柔和的陽光中，享受無比愜意的時刻。</p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav19 object-fit--contain">
-                    <img class="lazyload" data-src="./images/life/img-index-6.webp" alt="日出甲板" />
-                    <img class="lazyload" data-src="./images/life/img-index-7.webp" alt="日出甲板" />
-                    <img class="lazyload" data-src="./images/life/img-index-8.webp" alt="日出甲板" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-6.webp" alt="日出甲板" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-7.webp" alt="日出甲板" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-8.webp" alt="日出甲板" />
                   </div>
                 </div>
               </div>
@@ -2087,13 +2187,13 @@
                 <div class="col-12 col-sm-6 col-xxl-7">
                   <div id="product-slider-main20" class="product-slider__main object-fit--contain">
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-9.webp" alt="海洋精品店" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-9.webp" alt="海洋精品店" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-10.webp" alt="海洋精品店" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-10.webp" alt="海洋精品店" />
                     </div>
                     <div class="zoom">
-                      <img class="lazyload" data-src="./images/life/img-index-11.webp" alt="海洋精品店" />
+                      <img class="lazyload" data-src="./images/fuji/life/img-index-11.webp" alt="海洋精品店" />
                     </div>
                   </div>
                 </div>
@@ -2110,9 +2210,9 @@
                     </p>
                   </div>
                   <div id="product-slider__nav" class="product-slider-nav20 object-fit--contain">
-                    <img class="lazyload" data-src="./images/life/img-index-9.webp" alt="海洋精品店" />
-                    <img class="lazyload" data-src="./images/life/img-index-10.webp" alt="海洋精品店" />
-                    <img class="lazyload" data-src="./images/life/img-index-11.webp" alt="海洋精品店" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-9.webp" alt="海洋精品店" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-10.webp" alt="海洋精品店" />
+                    <img class="lazyload" data-src="./images/fuji/life/img-index-11.webp" alt="海洋精品店" />
                   </div>
                 </div>
               </div>
@@ -2126,7 +2226,7 @@
       <div class="footer-nav">
         <div class="container">
           <div class="footer-nav-list mitsul-logo-2">
-            <img src="./images/mitsul-logo-2.png" alt="MITSUI OCEAN CRUISES" />
+            <img src="./images/logo/mitsul-fuji-logo-2.png" alt="MITSUI OCEAN CRUISES" />
           </div>
 
           <ul class="footer-nav-list footer-px">
@@ -2177,4 +2277,3 @@
     <script src="./js/theme2.js"></script>
   </body>
 </html>
-
