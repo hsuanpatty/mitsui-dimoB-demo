@@ -1,0 +1,1540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+  font-family: 'GenKiMin-R';
+  src: url('../fonts/GenKiMin2PJP-R.otf') format("truetype");
+}
+
+
+:root{
+
+    --spanish-gray: hsl(0, 0%, 60%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --mitsui-blue: #005396;
+    --deck-blue: #083050;
+    --m2-blue: #005396;
+    --m3-blue: #0967b4;
+    --sandy-brown: hsl(29, 90%, 65%);
+    --bittersweet: hsl(0, 100%, 70%);
+     --mitsui-red: #EB4343;
+    --ocean-green: hsl(152, 51%, 52%);
+    --davys-gray: hsl(0, 0%, 33%);
+    --cultured: hsl(0, 0%, 93%);
+    --white: hsl(0, 100%, 100%);
+    --onyx: hsl(0, 0%, 27%);
+    --brown: #D7C5AE;
+    --dreck-gray: #F9F9F9;
+    --deck-gray2: #ddd;
+
+    --fs-1: 1.563rem;
+    --fs-2: 1.375rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
+    --fs-6: .938rem;
+    --fs-7: .875rem;
+    --fs-8: .813rem;
+    --fs-9: .75rem;
+    --fs-10: .688rem;
+    --fs-11: .625rem;
+
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+
+    --border-radius-medium: 10px;
+    --border-radius-small: 5px;
+
+    --transition-timing: .2s ease;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button{
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+a { text-decoration: none; }
+
+p,
+h2,
+h3,
+h4,
+h5,
+li,
+section,
+header{
+  font-family: 'GenKiMin-R';
+  letter-spacing: 1px;
+}
+
+
+img, svg, button, a { display: block; }
+
+span { display: inline-block; }
+
+html {
+    font-family: "Poppins", sans-serif;
+    overscroll-behavior: contain;
+}
+
+input{
+    display: block;
+    width: 100%;
+    font: inherit;
+}
+
+
+/* =======================
+   通用 Container
+======================= */
+.container,
+.modal-content-box,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* 小於 576px（手機） */
+@media (max-width: 575.98px) {
+    .container,
+    .modal-content,
+    .container-sm {
+        max-width: 100%;
+    }
+}
+
+/* ≥576px */
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-content-box     {
+         max-width: 600px;
+    }
+}
+
+
+/* ≥768px */
+@media (min-width: 768px) {
+    .container,
+    .modal-content-box,
+    .container-md {
+        max-width: 750px;
+    }
+}
+
+/* ≥992px */
+@media (min-width: 992px) {
+    .container,
+    .modal-content-box,
+    .container-lg {
+        max-width: 960px;
+    }
+}
+
+/* ≥1200px */
+@media (min-width: 1200px) {
+    .container,
+    .modal-content-box,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+/* ≥1400px */
+@media (min-width: 1400px) {
+    .container,
+    .modal-content-box,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+/* ≥1600px，可自行擴展 */
+@media (min-width: 1600px) {
+    .container,
+    .modal-content-box,
+    .container-3xl {
+        max-width: 1600px;
+    }
+}
+
+
+.row,
+.modal-row {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(var(--bs-gutter-y) * -1);
+	margin-right: calc(var(--bs-gutter-x) * -0.5);
+	margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.modal-row {
+  align-items: flex-start !important;
+}
+
+/* --------------------------
+   Modal - overlay + content
+-------------------------- */
+.modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+   z-index: 1006;
+}
+
+.modal__inner {
+  max-height: 96vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  width: min(100% - 2rem, 90ch);
+  position: relative;
+}
+
+.button-close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  font-size: 1rem;
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--mitsui-blue);
+  color: var(--white);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  z-index: 999;
+}
+
+.button-close-modal:hover {
+  transform: rotate(180deg);
+  background-color: var(--m2-blue);
+  color: var(--white);
+}
+
+.btn {
+  display: inline-flex;
+  border: 1px solid #906be1;
+  background-color: var(--color-accent);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  padding: 0.6em 2em 0.7em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: #906be1;
+  color: #fff;
+}
+
+.js-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.js-modal .modal__inner {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out 0.1s;
+}
+.js-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+.js-modal.is-open .modal__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.js-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* more 船介紹 */
+.modal-text {
+  justify-content: center;
+}
+
+.modal-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-row h2 {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    color: var(--eerie-black);
+    font-weight: bold;
+
+    padding-bottom: 2px;
+}
+
+.modal-row h4 {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: var(--eerie-black);
+    font-weight: bold;
+}
+
+.modal-row h3 {
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    color: var(--eerie-black);
+    font-weight: 500;
+
+    margin: auto 0;
+}
+
+.modal-row .line {
+    width: 3px;
+    height: 50px;
+    margin: 0 30px;
+    background-color: var(--mitsui-blue);
+}
+
+.modal-row p {
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    color: var(--sonic-silver);
+    font-weight: 500;
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+@media (max-width: 1399.98px) { 
+  .modal__inner {
+    height: 96vh;         
+    max-height: 96vh;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .modal-row p {
+    text-align: left;
+    padding: 6px 0;
+  }
+
+  .modal-row .line {
+    display: none;
+  }
+
+  .modal-text {
+    width: 100%;
+  }
+
+  .modal-row h3 {
+    font-size: 17px;
+    padding-top: 10px;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+
+.modal__inner {
+    height: 100vh;         
+    max-height: 100vh;
+    overflow: hidden;     
+    padding: 2.5rem 2rem;
+    width: 100%;
+    border-radius: 0;
+}
+
+.modal-box {
+    height: calc(100vh - 160px); 
+    overflow-y: auto;            
+}
+
+.modal-content-box {
+    padding-bottom: 80px;
+}
+
+  .modal-row {
+    padding: 0 0 10px;
+  }
+
+  .btn-modal {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  .js-modal {
+    align-items: end;
+  }
+
+
+  body.modal-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .modal-row h2 {
+    font-size: 27px;
+  }
+
+  .modal-row h4 {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (min-width: 1200px) { 
+  .modal-row p {
+    width: 70%;
+  }
+}
+
+
+/* 船介紹 切換 tabs */
+
+.product-gallery {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 主圖 */
+.fal {
+  font-family: "Font Awesome 5 Free";
+}
+
+.product-slider {
+  width: 500px;
+}
+.product-slider > div:nth-of-type(2) {
+  margin-top: 0;
+}
+.product-slider.reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.product-slider.reverse > div:first-of-type {
+  margin-bottom: 1em;
+}
+.product-slider.reverse > div:nth-of-type(2) {
+  margin-top: 0;
+}
+.product-slider.has-social-share #product-slider__nav {
+  width: 437.5px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.product-slider.has-social-share .social-share {
+  width: 57.5px;
+  height: 62.5px;
+  background: no-repeat;
+  border: 0;
+  opacity: 0.5;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  display: inline-block;
+  float: right;
+}
+.product-slider.has-social-share .social-share:hover {
+  opacity: 1;
+}
+.product-slider.has-social-share .social-share * {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.product-slider.has-social-share .social-share__links {
+  display: none;
+  position: absolute;
+  width: 150px;
+  padding: 2em 1em;
+  border: 1px solid black;
+  z-index: 1;
+  background: white;
+  left: 0;
+  margin-top: 15px;
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.16));
+}
+.product-slider.has-social-share .social-share__links::before {
+  float: left;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #ffffff;
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.16));
+  -webkit-filter: drop-shadow(0 -1px 0 black);
+  position: relative;
+  left: 17x;
+  content: "";
+  top: -11px;
+  position: absolute;
+  z-index: 2;
+}
+.product-slider.has-social-share .social-share__links a {
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 2em;
+  color: black;
+  display: inline-block;
+}
+.product-slider.has-social-share .social-share__text {
+  margin-top: 5px;
+}
+.product-slider.has-social-share .social-share__icon {
+  font-size: 1.25em;
+}
+.product-slider.has-social-share .social-share.is-visible {
+  opacity: 1;
+}
+.product-slider.has-social-share .social-share.is-visible .social-share__links {
+  display: block;
+}
+.product-slider .slick-slide {
+  display: flex;
+  align-items: center;
+}
+.product-slider .slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.product-slider .slick-prev,
+.product-slider .slick-next {
+  position: absolute;
+  top: 50%;                /* 垂直置中 */
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;             /* 可自訂大小 */
+  height: 40px;
+  background: rgba(255,255,255,0.7); /* 白底透明 */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.product-slider__main  .slick-prev::before {
+  left: 15px !important;
+  line-height: 0;
+  position: absolute;
+}
+.product-slider__main  .slick-next::before {
+  left: 17px !important;
+  line-height: 0;
+  position: absolute;
+}
+
+.product-slider__main .slick-next {
+  right: -4%;
+}
+
+.product-slider__main .slick-prev {
+  left: -3%;
+}
+
+.product-slider__main.object-fit--contain .slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-slider__main .slick-slide {
+  height: 100%;
+}
+
+#product-slider__nav.object-fit--contain .slick-slide img {
+  object-fit: cover;
+  width: 62px !important;
+  height: 50px !important;
+}
+
+#product-slider__nav .slick-track {
+  width: auto !important;
+}
+
+#product-slider__nav .slick-slide {
+    margin-right: 4rem !important;
+}
+
+#product-slider__nav .slick-slide.slick-current img {
+  border: 1px solid #333;
+  padding: 2px;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+
+#product-slider__nav .slick-slide img {
+  cursor: pointer;
+}
+.product-slider__main .object-fit--contain .slick-prev::before,
+.product-slider__main .object-fit--contain .slick-next::before {
+    padding-left: 16px;
+}
+
+@media (max-width: 767.98px) {
+  #product-slider__nav {
+    display: none;
+  }
+
+  .product-slider__main.object-fit--contain .slick-slide img {
+    height: 180px;
+    width: 300px;
+  }
+
+  .product-slider__main .slick-slide {
+      height: 180px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-slider__main.object-fit--contain .slick-slide img {
+    height: 230px;
+    width: 410px;
+  }
+
+  .product-slider__main .slick-slide {
+      height: 230px;
+  }
+
+  .product-slider__main .slick-next {
+    right: 0;
+  }
+
+  .product-slider__main .slick-prev {
+    left: 0;
+  }
+}
+
+@media (max-width: 375.98px) { 
+  .product-slider__main.object-fit--contain .slick-slide img {
+    height: 150px;
+    width: 100%;
+  }
+
+  .product-slider__main .slick-slide {
+      height: 150px;
+  }
+}
+
+@media (min-width: 1200px) { 
+  #product-slider__nav .slick-slide {
+    margin-right: 4.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) { 
+  #product-slider__nav .slick-slide {
+    margin-right: 3.8rem !important;
+  }
+}
+
+
+/* 版 */
+
+/* 外層置中 */
+.onboard-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 內層尺寸 */
+.onboard-box .top-cruise-panel-cruiseShip__media {
+    width: 1344px;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* 圖片防變形 */
+.onboard-box .top-cruise-panel-cruiseShip__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 767.98px) { 
+  .onboard-box .top-cruise-panel-cruiseShip__media {
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+
+/* 船文字調整 */
+
+.modal-box h5 {
+  font-size: 12px;
+  color: var(--deck-blue);
+  letter-spacing: 0.05rem;
+}
+
+.modal-box h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  padding: 6px 0 4px;
+}
+
+.modal-box h4 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding: 2px 0 4px;
+  align-items: center;
+}
+
+.modal-box h4>span {
+  color: var(--m2-blue);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding: 2px 4px 4px;
+}
+
+.modal-box p {
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    line-height: 1.2rem;
+    color: var(--sonic-silver);
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.modal-box p.content-p {
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    line-height: 1.2rem;
+    color: var(--sonic-silver);
+    font-weight: 500;
+    text-align: left;
+    padding: 5px 0 15px;
+}
+
+.modal-box p.content-p>span.text-red {
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    line-height: 1.2rem;
+    color: var(--mitsui-red);
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 0 10px;
+}
+
+.modal-box .mitsui-title h2 {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  padding-bottom: 8px;
+  margin: auto;
+}
+
+.modal-box .mitsui-title h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  padding-top: 8px;
+  margin: auto;
+  justify-content: center;
+}
+
+.modal-box .border-title2 {
+    width: 180px;
+    border-bottom: 2px solid var(--mitsui-blue);
+    margin: auto;
+}
+
+
+/* ul lu 點點 */
+.modal-ul {
+  column-count: 2;   /* 兩欄 */
+  column-gap: 40px;  /* 欄位間距 */
+  padding-left: 0;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.modal-ul li {
+  break-inside: avoid; /* 避免 li 被拆成兩半 */
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: var(--onyx)
+}
+
+/* 自訂圓點 */
+.modal-ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--eerie-black);
+    border-radius: 50%;
+}
+
+.m-horizon {
+        margin: 20px 0;
+}
+
+.fyi {
+    padding: 50px 0 30px;
+}
+
+.fyi p {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+    color: var(--eerie-black);
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) { 
+  .modal-box h5 {
+    font-size: 14px;
+  }
+
+  .modal-ul li {
+    font-size: 16px;
+  }
+
+  .modal-box h2 {
+    font-size: 27px;
+  }
+
+  .modal-box h4 {
+    font-size: 18px;
+    letter-spacing: 0.1rem;
+    line-height: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .modal-box p {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+
+    padding-top: 20px;
+  }
+
+   .modal-box p.content-p {
+    padding: 10px 0 ;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .modal-box h2 {
+    font-size: 23px;
+    letter-spacing: 0;
+  }
+
+  .modal-box h4 {
+    font-size: 14px;
+  }
+
+  .modal-ul li {
+    font-size: 15px;
+  }
+
+
+}
+
+
+@media (min-width: 768px) {
+    .m-horizon {
+        margin: 40px 0;
+    }
+}
+
+@media (min-width: 1400px) { 
+  .modal-box p {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    letter-spacing: 0.05rem;
+  }
+
+  
+  .modal-box p.content-p {
+    padding: 8px 0 15px;
+  }
+
+  .m-horizon {
+    margin: 45px 0;
+  }
+
+  .modal-box .row {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1600px) { 
+  .modal-box p {
+    letter-spacing: 0.1rem;
+  }
+}
+
+
+/* 上下滑動區域 設定 */
+.customScroll {
+    max-height: 58vh;
+    overflow-y: auto;
+    direction: ltr;
+    scrollbar-color: var(--m2-blue) #e4e4e4;
+    scrollbar-width: thin;
+}
+
+.customScroll::-webkit-scrollbar {
+    width: 6px; /* ← 這裡縮小，track 也會一起變細 */
+}
+.customScroll::-webkit-scrollbar-track {
+    background: #e4e4e4;
+    border-radius: 100px;
+}
+.customScroll::-webkit-scrollbar-thumb {
+    background: var(--m2-blue);
+}
+
+
+.box-slider .col-12.col-md-6.col-xxl-7,
+.box-slider .col-12.col-md-6.col-xxl-5 {
+  align-self: flex-start !important;
+}
+
+
+/* 套房說明 */
+
+.faq-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px 0 0;
+}
+
+.faq-w {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 0;
+}
+
+.mitsui-faq-item {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mitsui-faq-question {
+  font-family:'GenKiMin-R' ;
+  background: #fff;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid var(--eerie-black);
+  transition: background 0.3s ease;
+}
+
+.mitsui-faq-question:hover {
+  background: #fbfeff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: hsla(0, 0%, 93%, 0.925);
+  transition: all 0.4s ease;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.mitsui-faq-item.active .faq-answer {
+  max-height: 600px;
+  padding: 15px 20px;
+}
+
+.mitsui-faq-item .faq-icon {
+    width: 20px;                 /* 圓圈寬度 */
+    height: 20px;                /* 圓圈高度 */
+    border: 1px solid var(--eerie-black);
+    border-radius: 50%;           /* 完全圓形 */
+    
+    display: flex;               /* Flex 置中 */
+    align-items: center;         /* 垂直置中 */
+    justify-content: center;     /* 水平置中 */
+    
+    font-size: 18px;             /* 文字大小 */
+    line-height: 1;              /* 避免垂直偏移 */
+    
+    box-sizing: border-box;      /* 包含邊框在內計算寬高 */
+    padding-bottom: 0;
+    padding-left: 1px;
+    transition: transform 0.3s ease;
+}
+
+.mitsui-faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  padding-left: 1px;
+  padding-bottom: 1px;
+}
+
+.faq-answer h3 {
+    font-size: 20px;
+    font-family:'GenKiMin-R' ;  
+    font-weight: 500;
+    color: var(--eerie-black);
+    letter-spacing: 0.05rem;
+}
+
+.faq-answer li {
+  font-size: 16px;
+  list-style: disc;
+  margin-left: 20px;
+  padding-bottom: 1px;
+  color: var(--eerie-black);
+}
+
+.faq-border {       
+  border-bottom: 1px solid var(--sonic-silver);
+  margin: 20px 0;
+}
+
+.warn {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.1rem;
+  color: var(--eerie-black);
+  padding: 30px 10px 0;
+}
+
+.spares {
+  padding: 20px 10px 0;
+}
+.spares h2 {
+  font-size: 24px;
+}
+
+.service-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.service-container img {
+  width: 100%;
+} 
+
+.service-container h3 {
+    font-size: 1.1rem;
+    color: #000;
+    letter-spacing: 0.2rem;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.service-container ul {
+    padding: 0 0 20px;
+}
+
+.service-container li {
+  font-size: 16px;
+  list-style: disc;
+  margin-left: 20px;
+  color: var(--eerie-black);
+  line-height: 25px;
+}
+
+.modal-box .mitsui-title {
+  padding-top: 50px;
+}
+
+@media (max-width: 1399.98px) {
+  .faq-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .mitsui-faq-question,
+  .faq-answer {
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal-row br {
+    display: none;
+  }
+
+  .modal-box .mitsui-title {
+    padding-top: 30px;
+  }
+
+  .service-container {
+    padding: 20px 0 0;
+  }
+
+  .service-container ul {
+    padding: 10px 0 30px;
+  }
+
+  .service-container h3 {
+    padding: 20px 0 10px;
+  }
+
+  .service-container br {
+    display: none;
+  } 
+
+  .faq-w { 
+    padding: 0;
+  }
+
+  .faq-container {
+    width: 95%;
+  }
+
+  .mitsui-faq-question {
+    width: 100%;
+    letter-spacing: 0.05rem;
+    margin: auto;
+  }
+
+  .mitsui-faq-item .faq-icon {
+    padding-left: 0;
+  }
+
+  .mitsui-faq-question,
+  .faq-answer {
+    width: 100%;
+  }
+}
+
+
+/* 娛樂 */
+.ent-img img {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.modal-content-box .ent-deck {
+  color: var(--deck-blue);
+}
+
+
+.modal-content-box .ent-p {
+  padding: 0;
+}
+
+.modal-box .ent-pt {
+  padding: 0 0 50px;
+}
+
+.modal-content-box .ent-p span.text-red {
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  line-height: 1.2rem;
+  color: var(--mitsui-red);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 0 10px;
+}
+
+@media (max-width: 575.98px) {
+  .modal-box .ent-pt {
+    padding-top: 0;
+  }
+
+}
+
+
+/* 甲板平面圖 */
+.deck-bg {
+  background-color: var(--dreck-gray);
+}
+
+.deck-box {
+    padding: 50px 0 0;
+}
+
+/* Tabs */
+.deck-nav {
+  display: flex;
+  gap: 20px;             
+  overflow-x: auto;         
+  padding-bottom: 10px;       
+  scroll-behavior: smooth;
+  scrollbar-width: thin;      
+
+  justify-content: center;
+}
+
+.deck-nav::-webkit-scrollbar {
+  height: 6px;
+}
+.deck-nav::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Tabs */
+.deck-nav .tab-btn {
+  padding: 10px 18px;
+  font-weight: bold;
+  white-space: nowrap;        /* ★ 防止換行 */
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+  transition: 0.25s;
+}
+
+.deck-nav .tab-btn.active {
+  background: var(--m3-blue);
+  color: white;
+}
+
+.details-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin: 20px auto 0;
+  min-height: 550px; /* 根據內容調整 */
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s cubic-bezier(.22,.91,.29,.99), opacity 1s ease;
+  z-index: 1;
+}
+
+.details.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 3;
+}
+
+.details.exit-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  z-index: 2;
+  transition: transform 1s cubic-bezier(.22,.91,.29,.99), opacity 1s ease;
+}
+
+.dex-img {
+  width: 80%;
+  margin: auto;
+}
+
+.deck-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.deck-grid img {
+  width: 100%;
+}  
+
+.deck-grid h4 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+
+  line-height: 1.6;          
+  padding: 10px 0 12px;      
+  overflow: visible;         
+}
+
+.mitsui-py {
+  padding: 0 0 25px;
+}
+
+@media (max-width: 1199.98px) { 
+  .details-wrapper {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .deck-nav {           
+    overflow-x: auto;    
+    scroll-behavior: smooth; 
+    scrollbar-width: thin;  
+    -webkit-overflow-scrolling: touch; 
+    justify-content: flex-start; 
+  }
+
+  .deck-grid {
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .deck-grid h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .deck-grid {
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dex-img {
+    width: 100%;
+  } 
+
+  .details-wrapper {
+    min-height: 320px; /* 根據內容調整 */
+  }
+
+}
+
+/* 船隻 */
+.sakura-py {
+  padding: 30px 0;
+}
+
+.vessel-box {
+  padding: 10px 0 30px;
+}
+
+.vessel-box img {
+  width: 100%;
+  display: block;
+  margin: auto 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.vessel-box p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.1rem;
+  line-height: 1.8;
+  padding: 10px 0 ;
+  text-align: justify;
+}
+
+.vessel-box .mitsui-title {
+  padding-top: 0;
+  line-height: 40px;
+}
+
+.vessel-box .mitsui-title h2 {
+  text-align: left;
+}
+
+.vessel-box .border-title2 {
+  margin: auto  0;
+  padding-bottom: 10px;
+}
+
+/* 船隻細項 */
+.vessel-material {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+/* 單一項目 */
+.top-cruise-profile__description-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 這裡讓內容上下置中 */
+  padding: 0.9rem 0;
+  position: relative;
+}
+
+.top-cruise-profile__description-inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;      
+  bottom: 0;
+  height: 1px;
+  background: var(--deck-gray2);
+}
+
+.top-cruise-profile__dt,
+.top-cruise-profile__dd {
+  margin: 0;          
+  display: inline-block; 
+}
+
+
+/* 文字樣式 */
+.top-cruise-profile__dt {
+  font-size: 16px;
+  color: #555;
+}
+
+.top-cruise-profile__dd {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (min-width: 1400px) {
+  .vessel-material {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 1rem;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .sakura-py {
+    padding: 50px 0 30px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .vessel-box img {
+    width: 100%;
+    margin-bottom : 20px;
+  }
+
+  .vessel-material {
+    grid-template-columns: 1fr;
+  }
+
+  .top-cruise-profile__description-inner:nth-child(odd)::after {
+    right: 0; 
+  }
+}
+
+
+#goTop {
+  background-image: url(../images/top.png);
+  display: none;            
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 99rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+#goTop:hover {
+  opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+  #goTop {
+    bottom: 65px;
+    right: 10px;
+    opacity: 0.9;
+  } 
+}
