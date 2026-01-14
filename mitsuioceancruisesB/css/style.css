@@ -951,8 +951,6 @@ section {
 .mileage_box .border-title {
     width: 180px;
     border-bottom: 3px solid var(--mitsui-blue);
-    margin-bottom: 12px;
-    margin-top: 10px;
 }
 
 /* 單列項目 */
