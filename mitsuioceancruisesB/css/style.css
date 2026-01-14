@@ -510,12 +510,13 @@ section {
 .bento-card-description {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .bento-card h2 {
   font-weight: 400;
   font-size: 28px;
   letter-spacing: 0.2rem;
+  padding-bottom: 10px;
 }
 .bento-card h3 {
   font-weight: 600;
