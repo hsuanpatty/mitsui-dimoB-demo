@@ -958,7 +958,7 @@ section {
 /* 單列項目 */
 .ach-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 0.75rem 0.75rem 0 0; 
   border-radius: 0.5rem;
   transition: all 0.2s ease;
