@@ -1,1559 +1,2211 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-@font-face {
-  font-family: 'GenKiMin-R';
-  src: url('../fonts/GenKiMin2PJP-R.otf') format("truetype");
-}
-
-
-:root{
-
-    --spanish-gray: hsl(0, 0%, 60%);
-    --sonic-silver: hsl(0, 0%, 47%);
-    --eerie-black: hsl(0, 0%, 13%);
-    --mitsui-blue: #005396;
-    --deck-blue: #083050;
-    --m2-blue: #005396;
-    --m3-blue: #0967b4;
-    --sandy-brown: hsl(29, 90%, 65%);
-    --bittersweet: hsl(0, 100%, 70%);
-     --mitsui-red: #EB4343;
-    --ocean-green: hsl(152, 51%, 52%);
-    --davys-gray: hsl(0, 0%, 33%);
-    --cultured: hsl(0, 0%, 93%);
-    --white: hsl(0, 100%, 100%);
-    --onyx: hsl(0, 0%, 27%);
-    --brown: #D7C5AE;
-    --dreck-gray: #F9F9F9;
-    --deck-gray2: #ddd;
-
-    --fs-1: 1.563rem;
-    --fs-2: 1.375rem;
-    --fs-3: 1.25rem;
-    --fs-4: 1.125rem;
-    --fs-5: 1rem;
-    --fs-6: .938rem;
-    --fs-7: .875rem;
-    --fs-8: .813rem;
-    --fs-9: .75rem;
-    --fs-10: .688rem;
-    --fs-11: .625rem;
-
-    --weight-300: 300;
-    --weight-400: 400;
-    --weight-500: 500;
-    --weight-600: 600;
-    --weight-700: 700;
-
-    --border-radius-medium: 10px;
-    --border-radius-small: 5px;
-
-    --transition-timing: .2s ease;
-}
-
-*, ::before, ::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
-
-button{
-    background: none;
-    font: inherit;
-    border: none;
-    cursor: pointer;
-}
-
-a { text-decoration: none; }
-
-p,
-h2,
-h3,
-h4,
-h5,
-li,
-section,
-header{
-  font-family: 'GenKiMin-R';
-  letter-spacing: 1px;
-}
-
-
-img, svg, button, a { display: block; }
-
-span { display: inline-block; }
-
-html {
-    font-family: "Poppins", sans-serif;
-    overscroll-behavior: contain;
-}
-
-input{
-    display: block;
-    width: 100%;
-    font: inherit;
-}
-
-
-/* =======================
-   通用 Container
-======================= */
-.container,
-.modal-content-box,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-}
-
-/* 小於 576px（手機） */
-@media (max-width: 575.98px) {
-    .container,
-    .modal-content,
-    .container-sm {
-        max-width: 100%;
-    }
-}
-
-/* ≥576px */
-@media (min-width: 576px) {
-    .container,
-    .container-sm {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 576px) {
-    .modal-content-box     {
-         max-width: 600px;
-    }
-}
-
-
-/* ≥768px */
-@media (min-width: 768px) {
-    .container,
-    .modal-content-box,
-    .container-md {
-        max-width: 750px;
-    }
-}
-
-/* ≥992px */
-@media (min-width: 992px) {
-    .container,
-    .modal-content-box,
-    .container-lg {
-        max-width: 960px;
-    }
-}
-
-/* ≥1200px */
-@media (min-width: 1200px) {
-    .container,
-    .modal-content-box,
-    .container-xl {
-        max-width: 1140px;
-    }
-}
-
-/* ≥1400px */
-@media (min-width: 1400px) {
-    .container,
-    .modal-content-box,
-    .container-xxl {
-        max-width: 1320px;
-    }
-}
-
-/* ≥1600px，可自行擴展 */
-@media (min-width: 1600px) {
-    .container,
-    .modal-content-box,
-    .container-3xl {
-        max-width: 1600px;
-    }
-}
-
-
-.row,
-.modal-row {
-	--bs-gutter-x: 1.5rem;
-	--bs-gutter-y: 0;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: calc(var(--bs-gutter-y) * -1);
-	margin-right: calc(var(--bs-gutter-x) * -0.5);
-	margin-left: calc(var(--bs-gutter-x) * -0.5);
-}
-
-.modal-row {
-  align-items: flex-start !important;
-}
-
-/* --------------------------
-   Modal - overlay + content
--------------------------- */
-.modal {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-   z-index: 1006;
-}
-
-.modal__inner {
-  max-height: 96vh;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
-  width: min(100% - 2rem, 90ch);
-  position: relative;
-}
-
-.button-close-modal {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: block;
-  font-size: 1rem;
-  height: 40px;
-  width: 40px;
-  font-weight: bold;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: var(--mitsui-blue);
-  color: var(--white);
-  border-radius: 40px;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  z-index: 999;
-}
-
-.button-close-modal:hover {
-  transform: rotate(180deg);
-  background-color: var(--m2-blue);
-  color: var(--white);
-}
-
-.btn {
-  display: inline-flex;
-  border: 1px solid #906be1;
-  background-color: var(--color-accent);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font-size: 1rem;
-  line-height: 1;
-  color: #fff;
-  padding: 0.6em 2em 0.7em;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.btn:hover {
-  background-color: #906be1;
-  color: #fff;
-}
-
-.js-modal {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.js-modal .modal__inner {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.5s ease-in-out 0.1s;
-}
-.js-modal.is-open {
-  visibility: visible;
-  opacity: 1;
-}
-.js-modal.is-open .modal__inner {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.js-modal {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.js-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* more 船介紹 */
-.modal-text {
-  justify-content: center;
-}
-
-.modal-row {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px 0 20px;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-row h2 {
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 0.5rem;
-    color: var(--eerie-black);
-    font-weight: bold;
-
-    padding-bottom: 2px;
-}
-
-.modal-row h4 {
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    color: var(--eerie-black);
-    font-weight: bold;
-}
-
-.modal-row h3 {
-    font-size: 18px;
-    letter-spacing: 0.2rem;
-    line-height: 1.5rem;
-    color: var(--eerie-black);
-    font-weight: 500;
-
-    margin: auto 0;
-}
-
-.modal-row .line {
-    width: 3px;
-    height: 50px;
-    margin: 0 30px;
-    background-color: var(--mitsui-blue);
-}
-
-.modal-row p {
-    font-size: 14px;
-    letter-spacing: 0.05rem;
-    line-height: 1.5rem;
-    color: var(--sonic-silver);
-    font-weight: 500;
-    text-align: center;
-
-    padding-top: 20px;
-}
-
-@media (max-width: 1399.98px) { 
-  .modal__inner {
-    height: 96vh;         
-    max-height: 96vh;
-  }
-}
-
-@media (max-width: 1299.98px) { 
- .border-title2 {
-   padding-bottom: 10px;
- }
-}
-
-@media (max-width: 575.98px) {
-  .modal-row p {
-    text-align: left;
-    padding: 6px 0;
-  }
-
-  .modal-row .line {
-    display: none;
-  }
-
-  .modal-text {
-    width: 100%;
-  }
-
-  .modal-row h3 {
-    font-size: 17px;
-    padding-top: 10px;
-    letter-spacing: 0;
-    line-height: 25px;
-  }
-
-.modal__inner {
-    height: 100vh;         
-    max-height: 100vh;
-    overflow: hidden;     
-    padding: 2.5rem 2rem;
-    width: 100%;
-    border-radius: 0;
-}
-
-.modal-box {
-    height: calc(100vh - 160px); 
-    overflow-y: auto;            
-}
-
-.modal-content-box {
-    padding-bottom: 20px;
-}
-
-  .modal-row {
-    padding: 0 0 10px;
-  }
-
-  .btn-modal {
-    font-size: 1rem;
-    padding: 10px;
-    margin-top: 0;
-  }
-
-  .js-modal {
-    align-items: end;
-  }
-
-
-  body.modal-open {
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .modal-row h2 {
-    font-size: 27px;
-  }
-
-  .modal-row h4 {
-    font-size: 14px;
-  }
-
-}
-
-
-@media (min-width: 1200px) { 
-  .modal-row p {
-    width: 70%;
-  }
-}
-
-
-/* 船介紹 切換 tabs */
-
-.product-gallery {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* 主圖 */
-.fal {
-  font-family: "Font Awesome 5 Free";
-}
-
-.product-slider {
-  width: 500px;
-}
-.product-slider > div:nth-of-type(2) {
-  margin-top: 0;
-}
-.product-slider.reverse {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.product-slider.reverse > div:first-of-type {
-  margin-bottom: 1em;
-}
-.product-slider.reverse > div:nth-of-type(2) {
-  margin-top: 0;
-}
-.product-slider.has-social-share #product-slider__nav {
-  width: 437.5px;
-  margin-bottom: 0;
-  display: inline-block;
-}
-.product-slider.has-social-share .social-share {
-  width: 57.5px;
-  height: 62.5px;
-  background: no-repeat;
-  border: 0;
-  opacity: 0.5;
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  box-shadow: none;
-  display: inline-block;
-  float: right;
-}
-.product-slider.has-social-share .social-share:hover {
-  opacity: 1;
-}
-.product-slider.has-social-share .social-share * {
-  display: block;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.product-slider.has-social-share .social-share__links {
-  display: none;
-  position: absolute;
-  width: 150px;
-  padding: 2em 1em;
-  border: 1px solid black;
-  z-index: 1;
-  background: white;
-  left: 0;
-  margin-top: 15px;
-  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.16));
-}
-.product-slider.has-social-share .social-share__links::before {
-  float: left;
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid #ffffff;
-  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.16));
-  -webkit-filter: drop-shadow(0 -1px 0 black);
-  position: relative;
-  left: 17x;
-  content: "";
-  top: -11px;
-  position: absolute;
-  z-index: 2;
-}
-.product-slider.has-social-share .social-share__links a {
-  text-decoration: none;
-  margin: 0 0.5em;
-  font-size: 2em;
-  color: black;
-  display: inline-block;
-}
-.product-slider.has-social-share .social-share__text {
-  margin-top: 5px;
-}
-.product-slider.has-social-share .social-share__icon {
-  font-size: 1.25em;
-}
-.product-slider.has-social-share .social-share.is-visible {
-  opacity: 1;
-}
-.product-slider.has-social-share .social-share.is-visible .social-share__links {
-  display: block;
-}
-.product-slider .slick-slide {
-  display: flex;
-  align-items: center;
-}
-.product-slider .slick-slide img {
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-}
-.product-slider .slick-prev,
-.product-slider .slick-next {
-  position: absolute;
-  top: 50%;                /* 垂直置中 */
-  transform: translateY(-50%);
-  z-index: 2;
-  width: 40px;             /* 可自訂大小 */
-  height: 40px;
-  background: rgba(255,255,255,0.7); /* 白底透明 */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.product-slider__main  .slick-prev::before {
-  left: 15px !important;
-  line-height: 0;
-  position: absolute;
-}
-.product-slider__main  .slick-next::before {
-  left: 17px !important;
-  line-height: 0;
-  position: absolute;
-}
-
-.product-slider__main .slick-next {
-  right: -4%;
-}
-
-.product-slider__main .slick-prev {
-  left: -3%;
-}
-
-.product-slider__main.object-fit--contain .slick-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.product-slider__main .slick-slide {
-  height: 100%;
-}
-
-#product-slider__nav.object-fit--contain .slick-slide img {
-  object-fit: cover;
-  width: 62px !important;
-  height: 50px !important;
-}
-
-#product-slider__nav .slick-track {
-  width: auto !important;
-}
-
-#product-slider__nav .slick-slide {
-    margin-right: 4rem !important;
-}
-
-#product-slider__nav .slick-slide.slick-current img {
-  border: 1px solid #333;
-  padding: 2px;
-  box-sizing: border-box;
-  opacity: 0.7;
-}
-
-#product-slider__nav .slick-slide img {
-  cursor: pointer;
-}
-.product-slider__main .object-fit--contain .slick-prev::before,
-.product-slider__main .object-fit--contain .slick-next::before {
-    padding-left: 16px;
-}
-
-@media (max-width: 767.98px) {
-  #product-slider__nav {
-    display: none;
-  }
-
-  .product-slider__main.object-fit--contain .slick-slide img {
-    height: 180px;
-    width: 300px;
-  }
-
-  .product-slider__main .slick-slide {
-      height: 180px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .product-slider__main.object-fit--contain .slick-slide img {
-    height: 230px;
-    width: 410px;
-  }
-
-  .product-slider__main .slick-slide {
-      height: 230px;
-  }
-
-  .product-slider__main .slick-next {
-    right: 0;
-  }
-
-  .product-slider__main .slick-prev {
-    left: 0;
-  }
-}
-
-@media (max-width: 375.98px) { 
-  .product-slider__main.object-fit--contain .slick-slide img {
-    height: 150px;
-    width: 100%;
-  }
-
-  .product-slider__main .slick-slide {
-      height: 150px;
-  }
-}
-
-@media (min-width: 1200px) { 
-  #product-slider__nav .slick-slide {
-    margin-right: 4.5rem !important;
-  }
-}
-
-@media (min-width: 1400px) { 
-  #product-slider__nav .slick-slide {
-    margin-right: 3.8rem !important;
-  }
-}
-
-
-/* 版 */
-
-/* 外層置中 */
-.onboard-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* 內層尺寸 */
-.onboard-box .top-cruise-panel-cruiseShip__media {
-    width: 1344px;
-    height: 350px;
-    overflow: hidden;
-}
-
-/* 圖片防變形 */
-.onboard-box .top-cruise-panel-cruiseShip__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-@media (max-width: 767.98px) { 
-  .onboard-box .top-cruise-panel-cruiseShip__media {
-    width: 100%;
-    height: 100%;
-}
-}
-
-
-
-/* 船文字調整 */
-
-.modal-box h5 {
-  font-size: 12px;
-  color: var(--deck-blue);
-  letter-spacing: 0.05rem;
-}
-
-.modal-box h2 {
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  padding: 6px 0 4px;
-}
-
-.modal-box h4 {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  padding: 2px 0 4px;
-  align-items: center;
-}
-
-.modal-box h4>span {
-  color: var(--m2-blue);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  padding: 2px 4px 4px;
-}
-
-.modal-box p {
-    font-size: 14px;
-    letter-spacing: 0.05rem;
-    line-height: 1.2rem;
-    color: var(--sonic-silver);
-    font-weight: 500;
-    text-align: left;
-    padding-top: 15px;
-    padding-bottom: 5px;
-}
-
-.modal-box p.content-p {
-    font-size: 14px;
-    letter-spacing: 0.05rem;
-    line-height: 1.2rem;
-    color: var(--sonic-silver);
-    font-weight: 500;
-    text-align: left;
-    padding: 5px 0 15px;
-}
-
-.modal-box p.content-p>span.text-red {
-    font-size: 14px;
-    letter-spacing: 0.05rem;
-    line-height: 1.2rem;
-    color: var(--mitsui-red);
-    font-weight: 500;
-    text-align: left;
-    padding: 10px 0 10px;
-}
-
-.modal-box .mitsui-title h2 {
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  padding-bottom: 8px;
-  margin: auto;
-}
-
-.modal-box .mitsui-title h4 {
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  padding-top: 8px;
-  margin: auto;
-  justify-content: center;
-}
-
-.modal-box .border-title2 {
-    width: 180px;
-    border-bottom: 2px solid var(--mitsui-blue);
-    margin: auto;
-}
-
-
-/* ul lu 點點 */
-.modal-ul {
-  column-count: 2;   /* 兩欄 */
-  column-gap: 40px;  /* 欄位間距 */
-  padding-left: 0;
-  margin: 0;
-  padding-top: 5px;
-}
-
-.modal-ul li {
-  break-inside: avoid; /* 避免 li 被拆成兩半 */
-  list-style: none;
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 7px;
-  font-size: 14px;
-  color: var(--onyx)
-}
-
-/* 自訂圓點 */
-.modal-ul li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 5px;
-    height: 5px;
-    background-color: var(--eerie-black);
-    border-radius: 50%;
-}
-
-.m-horizon {
-        margin: 20px 0;
-}
-
-.fyi {
-    padding: 50px 0 30px;
-}
-
-.fyi p {
-    font-size: 14px;
-    letter-spacing: 0.1rem;
-    line-height: 1.2rem;
-    color: var(--eerie-black);
-    font-weight: 400;
-    text-align: center;
-}
-
-@media (max-width: 767.98px) { 
-  .modal-box h5 {
-    font-size: 14px;
-  }
-
-  .modal-ul li {
-    font-size: 16px;
-  }
-
-  .modal-box h2 {
-    font-size: 27px;
-  }
-
-  .modal-box h4 {
-    font-size: 18px;
-    letter-spacing: 0.1rem;
-    line-height: 1.3rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-
-  .modal-box p {
-    font-size: 16px;
-    letter-spacing: 0.1rem;
-    line-height: 1.5rem;
-
-    padding-top: 20px;
-  }
-
-   .modal-box p.content-p {
-    padding: 10px 0 ;
-  }
-}
-
-
-@media (max-width: 575.98px) {
-  .modal-box h2 {
-    font-size: 23px;
-    letter-spacing: 0;
-  }
-
-  .modal-box h4 {
-    font-size: 14px;
-  }
-
-  .modal-ul li {
-    font-size: 15px;
-  }
-
-
-}
-
-
-@media (min-width: 768px) {
-    .m-horizon {
-        margin: 40px 0;
-    }
-}
-
-@media (min-width: 1400px) { 
-  .modal-box p {
-    padding-top: 10px;
-    padding-bottom: 8px;
-    letter-spacing: 0.05rem;
-  }
-
-  
-  .modal-box p.content-p {
-    padding: 8px 0 15px;
-  }
-
-  .m-horizon {
-    margin: 45px 0;
-  }
-
-  .modal-box .row {
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1600px) { 
-  .modal-box p {
-    letter-spacing: 0.1rem;
-  }
-}
-
-
-/* 上下滑動區域 設定 */
-.customScroll {
-    max-height: 58vh;
-    overflow-y: auto;
-    direction: ltr;
-    scrollbar-color: var(--m2-blue) #e4e4e4;
-    scrollbar-width: thin;
-}
-
-.customScroll::-webkit-scrollbar {
-    width: 6px; /* ← 這裡縮小，track 也會一起變細 */
-}
-.customScroll::-webkit-scrollbar-track {
-    background: #e4e4e4;
-    border-radius: 100px;
-}
-.customScroll::-webkit-scrollbar-thumb {
-    background: var(--m2-blue);
-}
-
-
-.box-slider .col-12.col-md-6.col-xxl-7,
-.box-slider .col-12.col-md-6.col-xxl-5 {
-  align-self: flex-start !important;
-}
-
-
-/* 套房說明 */
-
-.faq-container {
-  width: 800px;
-  margin: 0 auto;
-  padding: 20px 0 0;
-}
-
-.faq-w {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 20px 0 0;
-}
-
-.mitsui-faq-item {
-  background: #fff;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.mitsui-faq-question {
-  font-family:'GenKiMin-R' ;
-  background: #fff;
-  border: none;
-  width: 100%;
-  text-align: left;
-  padding: 18px 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #000;
-  letter-spacing: 0.1rem;
-  border-bottom: 1px solid var(--eerie-black);
-  transition: background 0.3s ease;
-}
-
-.mitsui-faq-question:hover {
-  background: #fbfeff;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  background: hsla(0, 0%, 93%, 0.925);
-  transition: all 0.4s ease;
-  padding: 0 20px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.mitsui-faq-item.active .faq-answer {
-  max-height: 600px;
-  padding: 15px 20px;
-}
-
-.mitsui-faq-item .faq-icon {
-    width: 20px;                 /* 圓圈寬度 */
-    height: 20px;                /* 圓圈高度 */
-    border: 1px solid var(--eerie-black);
-    border-radius: 50%;           /* 完全圓形 */
-    
-    display: flex;               /* Flex 置中 */
-    align-items: center;         /* 垂直置中 */
-    justify-content: center;     /* 水平置中 */
-    
-    font-size: 18px;             /* 文字大小 */
-    line-height: 1;              /* 避免垂直偏移 */
-    
-    box-sizing: border-box;      /* 包含邊框在內計算寬高 */
-    padding-bottom: 0;
-    padding-left: 1px;
-    transition: transform 0.3s ease;
-}
-
-.mitsui-faq-item.active .faq-icon {
-  transform: rotate(45deg);
-  padding-left: 1px;
-  padding-bottom: 1px;
-}
-
-.faq-answer h3 {
-    font-size: 20px;
-    font-family:'GenKiMin-R' ;  
-    font-weight: 500;
-    color: var(--eerie-black);
-    letter-spacing: 0.05rem;
-}
-
-.faq-answer li {
-  font-size: 16px;
-  list-style: disc;
-  margin-left: 20px;
-  padding-bottom: 1px;
-  color: var(--eerie-black);
-}
-
-.faq-border {       
-  border-bottom: 1px solid var(--sonic-silver);
-  margin: 20px 0;
-}
-
-.warn {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.1rem;
-  color: var(--eerie-black);
-  padding: 30px 10px 0;
-}
-
-.spares {
-  padding: 20px 10px 0;
-}
-.spares h2 {
-  font-size: 24px;
-}
-
-.service-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 0 0;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.service-container img {
-  width: 100%;
-} 
-
-.service-container h3 {
-    font-size: 1.1rem;
-    color: #000;
-    letter-spacing: 0.2rem;
-    line-height: 30px;
-    font-weight: 500;
-    padding: 20px 0;
-}
-
-.service-container ul {
-    padding: 0 0 20px;
-}
-
-.service-container li {
-  font-size: 16px;
-  list-style: disc;
-  margin-left: 20px;
-  color: var(--eerie-black);
-  line-height: 25px;
-}
-
-.modal-box .mitsui-title {
-  padding-top: 50px;
-}
-
-@media (max-width: 1399.98px) {
-  .faq-container {
-    width: 100%;
-    margin: auto;
-  }
-
-  .mitsui-faq-question,
-  .faq-answer {
-    width: 90%;
-    margin: auto;
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .modal-row br {
-    display: none;
-  }
-
-  .modal-box .mitsui-title {
-    padding-top: 30px;
-  }
-
-  .service-container {
-    padding: 20px 0 0;
-  }
-
-  .service-container ul {
-    padding: 10px 0 30px;
-  }
-
-  .service-container h3 {
-    padding: 20px 0 10px;
-  }
-
-  .service-container br {
-    display: none;
-  } 
-
-  .faq-w { 
-    padding: 0;
-  }
-
-  .faq-container {
-    width: 95%;
-  }
-
-  .mitsui-faq-question {
-    width: 100%;
-    letter-spacing: 0.05rem;
-    margin: auto;
-
-    line-height: 30px;
-  }
-
-  .mitsui-faq-item .faq-icon {
-    padding-left: 0;
-  }
-
-  .mitsui-faq-question,
-  .faq-answer {
-    width: 100%;
-  }
-}
-
-
-/* 娛樂 */
-.ent-img img {
-  width: 100%;
-  padding: 15px 0;
-}
-
-.modal-content-box .ent-deck {
-  color: var(--deck-blue);
-}
-
-
-.modal-content-box .ent-p {
-  padding: 0;
-}
-
-.modal-box .ent-pt {
-  padding: 0 0 50px;
-}
-
-.modal-content-box .ent-p span.text-red {
-  font-size: 14px;
-  letter-spacing: 0.05rem;
-  line-height: 1.2rem;
-  color: var(--mitsui-red);
-  font-weight: 500;
-  text-align: left;
-  padding: 10px 0 10px;
-}
-
-@media (max-width: 575.98px) {
-  .modal-box .ent-pt {
-    padding-top: 0;
-  }
-
-}
-
-
-/* 甲板平面圖 */
-.deck-bg {
-  background-color: var(--dreck-gray);
-}
-
-.deck-box {
-    padding: 50px 0 0;
-}
-
-/* Tabs */
-.deck-nav {
-  display: flex;
-  gap: 20px;             
-  overflow-x: auto;         
-  padding-bottom: 10px;       
-  scroll-behavior: smooth;
-  scrollbar-width: thin;      
-
-  justify-content: center;
-}
-
-.deck-nav::-webkit-scrollbar {
-  height: 6px;
-}
-.deck-nav::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-/* Tabs */
-.deck-nav .tab-btn {
-  padding: 10px 18px;
-  font-weight: bold;
-  white-space: nowrap;        /* ★ 防止換行 */
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background: #eee;
-  transition: 0.25s;
-}
-
-.deck-nav .tab-btn.active {
-  background: var(--m3-blue);
-  color: white;
-}
-
-.details-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 80%;
-  margin: 20px auto 0;
-  min-height: 550px; /* 根據內容調整 */
-}
-
-.details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 20px 0;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s cubic-bezier(.22,.91,.29,.99), opacity 1s ease;
-  z-index: 1;
-}
-
-.details.active {
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 3;
-}
-
-.details.exit-left {
-  opacity: 0;
-  transform: translateX(-100%);
-  z-index: 2;
-  transition: transform 1s cubic-bezier(.22,.91,.29,.99), opacity 1s ease;
-}
-
-.dex-img {
-  width: 80%;
-  margin: auto;
-}
-
-.deck-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  overflow: hidden;
-
-  padding-top: 40px;
-  padding-bottom: 50px;
-}
-
-.deck-grid img {
-  width: 100%;
-}  
-
-.deck-grid h4 {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-
-  line-height: 1.6;          
-  padding: 10px 0 12px;      
-  overflow: visible;         
-}
-
-.mitsui-py {
-  padding: 0 0 25px;
-}
-
-@media (max-width: 1199.98px) { 
-  .details-wrapper {
-    width: 100%;
-    min-height: 400px;
-  }
-
-  .deck-nav {           
-    overflow-x: auto;    
-    scroll-behavior: smooth; 
-    scrollbar-width: thin;  
-    -webkit-overflow-scrolling: touch; 
-    justify-content: flex-start; 
-  }
-
-  .deck-grid {
-    gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .deck-grid h4 {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 575.98px) { 
-  .deck-grid {
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .dex-img {
-    width: 100%;
-  } 
-
-  .details-wrapper {
-    min-height: 320px; /* 根據內容調整 */
-  }
-
-}
-
-/* 船隻 */
-.sakura-py {
-  padding: 30px 0;
-}
-
-.vessel-box {
-  padding: 10px 0 30px;
-}
-
-.vessel-box img {
-  width: 100%;
-  display: block;
-  margin: auto 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.vessel-box p {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--black);
-  letter-spacing: 0.1rem;
-  line-height: 1.8;
-  padding: 10px 0 ;
-  text-align: justify;
-}
-
-.vessel-box .mitsui-title {
-  padding-top: 0;
-  line-height: 40px;
-}
-
-.vessel-box .mitsui-title h2 {
-  text-align: left;
-}
-
-.vessel-box .border-title2 {
-  margin: auto  0;
-  padding-bottom: 10px;
-}
-
-/* 船隻細項 */
-.vessel-material {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
-  row-gap: 1rem;
-  align-items: center;
-}
-
-/* 單一項目 */
-.top-cruise-profile__description-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* 這裡讓內容上下置中 */
-  padding: 0.9rem 0;
-  position: relative;
-}
-
-.top-cruise-profile__description-inner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;      
-  bottom: 0;
-  height: 1px;
-  background: var(--deck-gray2);
-}
-
-.top-cruise-profile__dt,
-.top-cruise-profile__dd {
-  margin: 0;          
-  display: inline-block; 
-}
-
-
-/* 文字樣式 */
-.top-cruise-profile__dt {
-  font-size: 16px;
-  color: #555;
-}
-
-.top-cruise-profile__dd {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0;
-}
-
-@media (min-width: 1400px) {
-  .vessel-material {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3rem;
-    row-gap: 1rem;
-    align-items: center;
-    padding: 0 10px;
-  }
-
-  .sakura-py {
-    padding: 50px 0 30px;
-  }
-
-}
-
-@media (max-width: 768.98px) {
-  .vessel-box img {
-    width: 100%;
-    margin-bottom : 20px;
-  }
-
-  .vessel-material {
-    grid-template-columns: 1fr;
-  }
-
-  .top-cruise-profile__description-inner:nth-child(odd)::after {
-    right: 0; 
-  }
-}
-
-@media (max-width: 575.98px) {
-  .sakura-introduce .mitsui-title h2 {
-    font-size: 24px;
-    white-space: nowrap;
-    letter-spacing: 2px;
-  }
-
-  .vessel-box .border-title2 {
-    padding-bottom: 0;
-  }
-}
-
-
-#goTop {
-  background-image: url(../images/top.png);
-  display: none;            
-  position: fixed;
-  width: 45px;
-  height: 45px;
-  bottom: 20px;
-  right: 30px;
-  border-radius: 99rem;
-  cursor: pointer;
-  opacity: 0.9;
-  transition: 0.3s;
-  z-index: 100;
-}
-
-#goTop:hover {
-  opacity: 1;
-}
-
-@media (max-width: 575.98px) {
-  #goTop {
-    bottom: 65px;
-    right: 10px;
-    opacity: 0.9;
-  } 
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三井海洋郵輪 MITSUI OCEAN SAKURA</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="三井海洋富士號｜台灣旅客好評如潮！船艙、餐廳、休閒空間寬敞舒適～服務貼心細緻，享受賓至如歸的款待。探索秘境跳島，實現精彩海上假期!"
+    />
+    <meta
+      name="keywords"
+      content="三井海洋郵輪,日本郵輪,巨匠旅遊,日本郵輪旅遊,Mitsui OCEAN CRUISE,富士山郵輪,日本沿岸郵輪,日本丸,三井海洋富士,豪華郵輪,奢華假期,郵輪旅遊推薦,郵輪航程,沖繩,東京,凱旋旅遊"
+    />
+
+    <!-- open graph  -->
+    <meta property="og:site_name" content="三井海洋郵輪" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="三井海洋郵輪 MITSUI OCEAN SAKURA" />
+    <meta
+      name="og:description"
+      content="三井海洋富士號｜台灣旅客好評如潮！船艙、餐廳、休閒空間寬敞舒適～服務貼心細緻，享受賓至如歸的款待。探索秘境跳島，實現精彩海上假期!"
+    />
+    <meta property="og:image" content="./images/ogp.jpg" />
+    <meta property="og:image:alt" content="三井海洋郵輪 MITSUI OCEAN SAKURA" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/onboard-modal-sakura.css" />
+
+    <link rel="stylesheet" href="./css/fonts.css" />
+
+    <!-- 輪播 -->
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+  </head>
+
+  <body>
+    <div class="overlay" data-overlay></div>
+    <div id="goTop"></div>
+    <!-- 主導航區塊 -->
+    <nav class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo"><img src="./images/logo/mitsul-sakura-logo.png" alt="MITSUI OCEAN SAKURA" /></a>
+      </div>
+    </nav>
+
+    <!-- 桌面菜單 -->
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="./mitsuioceancruises.html" class="menu-title">Home</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">船介紹 <i class="fa-solid fa-angle-down fa-xs"></i></a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="./onboard-fuji.html">三井海洋富士號</a>
+              </li>
+              <li class="dropdown-item"><a href="./onboard-sakura.html">三井海洋櫻花號</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <a href="./excursion.html" class="menu-title">郵輪行程</a>
+          </li>
+          <li class="menu-category">
+            <a href="./download.html" class="menu-title">資訊下載</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <div class="banner hidden slider">
+        <div class="banner-img">
+          <!-- 1. -->
+          <div class="banner_title">
+            <picture>
+              <source media="(max-width: 575px)" srcset="./images/sakura/sakura-banner-sm1.jpg" class="w-100 d-block" width="575" alt="鬱金香(荷蘭)" />
+              <img src="./images/sakura/sakura-banner1.jpg" class="carousel__images" alt="三井海洋郵輪" />
+            </picture>
+
+            <div class="swiper-slide-caption">
+              <h3>MITSUI OCEAN SAKURA</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 手機底部導航 -->
+    <div class="mobile-bottom-navigation">
+      <!-- menu 按鈕 -->
+      <button class="action-btn menu-outline" data-mobile-menu-open-btn>
+        <svg viewBox="0 0 512 512" width="26" height="26">
+          <path d="M80 160h352M80 256h352M80 352h352" stroke="currentColor" stroke-width="32" fill="none" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <!-- home 按鈕 -->
+      <a href="./mitsuioceancruises.html" class="action-btn home-outline">
+        <svg viewBox="0 0 512 512" width="26" height="26">
+          <path
+            d="M80 212L256 64l176 148v236a20 20 0 0 1-20 20H100a20 20 0 0 1-20-20V212z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="32"
+            stroke-linejoin="round"
+          />
+          <path d="M192 448V288h128v160" fill="none" stroke="currentColor" stroke-width="32" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- 手機側邊菜單 -->
+    <nav class="mobile-navigation-menu" data-mobile-menu>
+      <div class="menu-top">
+        <a href="./mitsuioceancruises.html"><h2 class="menu-title">三井海洋郵輪</h2></a>
+        <button class="menu-close-btn" data-mobile-menu-close-btn aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+            <path
+              d="M400 145.49L366.51 112 256 222.51
+                 145.49 112 112 145.49 222.51 256
+                 112 366.51 145.49 400 256 289.49
+                 366.51 400 400 366.51 289.49 256z"
+            />
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">船介紹</p>
+            <div class="caret-btn">
+              <svg class="add-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="none">
+                <path d="M256 112v288M112 256h288" stroke="currentColor" stroke-width="48" stroke-linecap="round" />
+              </svg>
+
+              <!-- − -->
+              <svg class="remove-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="none">
+                <path d="M112 256h288" stroke="currentColor" stroke-width="48" stroke-linecap="round" />
+              </svg>
+            </div>
+          </button>
+          <ul class="submenu-category-list">
+            <li class="submenu-category">
+              <a href="./onboard-fuji.html">三井海洋富士號</a>
+            </li>
+            <li class="submenu-category"><a href="./onboard-sakura.html">三井海洋櫻花號</a></li>
+          </ul>
+        </li>
+        <li class="menu-category">
+          <a href="./excursion.html" class="menu-title">郵輪行程</a>
+        </li>
+        <li class="menu-category">
+          <a href="./download.html" class="menu-title">資訊下載</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- 三井海洋櫻花號 -->
+      <section>
+        <div class="container">
+          <div class="mitsui-title">
+            <h2>三井海洋櫻花號</h2>
+            <div class="border-title2"></div>
+            <h4>MITSUI OCEAN SAKURA</h4>
+          </div>
+        </div>
+      </section>
+      <!-- 船的介紹 -->
+      <section>
+        <div class="container onboard-box">
+          <!-- 1 餐飲 -->
+          <div class="l-content__outer l-content__outer--cruise pt-sm-30">
+            <div class="l-content__inner l-content__inner--cruise">
+              <div class="container">
+                <div class="top-cruise-panel-cruiseShip">
+                  <div class="top-cruise-panel-cruiseShip__item">
+                    <div class="top-cruise-panel-cruiseShip__media">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/sakura/diagram.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/sakura/diagram-2.jpg"
+                          alt="三井海洋櫻花號"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="top-cruise-panel-cruiseShip__overlay">
+                      <h4>DINING & BAR</h4>
+                      <h2>餐飲</h2>
+                      <button class="top-cruise-panel-cruiseShip__btn js-show-modal" data-modal="1">餐飲酒吧</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 套房 -->
+          <div class="l-content__outer l-content__outer--cruise">
+            <div class="l-content__inner l-content__inner--cruise pt-sm-15 pt-10 pb-sm-15">
+              <div class="container">
+                <div class="top-cruise-panel-cruiseShip">
+                  <div class="top-cruise-panel-cruiseShip__item">
+                    <div class="top-cruise-panel-cruiseShip__media">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/sakura/diagram.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/sakura/diagram-2.jpg"
+                          alt="三井海洋櫻花號"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="top-cruise-panel-cruiseShip__overlay">
+                      <h4>SUITES</h4>
+                      <h2>套房</h2>
+                      <button class="top-cruise-panel-cruiseShip__btn js-show-modal" data-modal="modal-2">套房類型</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 娛樂 -->
+          <div class="l-content__outer l-content__outer--cruise">
+            <div class="l-content__inner l-content__inner--cruise pt-sm-15 pt-10 pb-sm-15">
+              <div class="container">
+                <div class="top-cruise-panel-cruiseShip">
+                  <div class="top-cruise-panel-cruiseShip__item">
+                    <div class="top-cruise-panel-cruiseShip__media">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/sakura/diagram.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/sakura/diagram-2.jpg"
+                          alt="三井海洋櫻花號"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="top-cruise-panel-cruiseShip__overlay">
+                      <h4>ENTERTAINMENT</h4>
+                      <h2>娛樂</h2>
+                      <button class="top-cruise-panel-cruiseShip__btn js-show-modal" data-modal="modal-3">休閒活動</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4 船上設施 -->
+          <div class="l-content__outer l-content__outer--cruise">
+            <div class="l-content__inner l-content__inner--cruise pt-sm-15 pt-10 pb-sm-15">
+              <div class="container">
+                <div class="top-cruise-panel-cruiseShip">
+                  <div class="top-cruise-panel-cruiseShip__item">
+                    <div class="top-cruise-panel-cruiseShip__media">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/sakura/diagram.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/sakura/diagram-2.jpg"
+                          alt="三井海洋櫻花號"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="top-cruise-panel-cruiseShip__overlay">
+                      <h4>ONBOARD LIFE</h4>
+                      <h2>船上設施</h2>
+                      <button class="top-cruise-panel-cruiseShip__btn js-show-modal" data-modal="modal-4">休閒活動</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5 岸上觀光 -->
+          <div class="l-content__outer l-content__outer--cruise">
+            <div class="l-content__inner l-content__inner--cruise pt-sm-15 pt-10 pb-sm-15">
+              <div class="container">
+                <div class="top-cruise-panel-cruiseShip">
+                  <div class="top-cruise-panel-cruiseShip__item">
+                    <div class="top-cruise-panel-cruiseShip__media">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/sakura/diagram.jpg" width="1344" height="350" />
+                        <img
+                          src="./images/sakura/diagram-2.jpg"
+                          alt="三井海洋櫻花號"
+                          class="top-panel-cruiseShip__mediaItem"
+                          width="703"
+                          height="471"
+                          loading="lazy"
+                        />
+                      </picture>
+                    </div>
+                    <div class="top-cruise-panel-cruiseShip__overlay">
+                      <h4>SHORE EXCURSIONS</h4>
+                      <h2>岸上觀光</h2>
+                      <button class="top-cruise-panel-cruiseShip__btn js-show-modal" data-modal="modal-5">體驗文化</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 甲板平面圖 -->
+      <section>
+        <div class="deck-bg">
+          <div class="container">
+            <div class="mitsui-title">
+              <h2>甲板平面圖</h2>
+              <div class="border-title2"></div>
+              <h4>Deck Plans</h4>
+            </div>
+            <div class="deck-box">
+              <!-- Tabs -->
+              <div class="deck-nav">
+                <button class="tab-btn active" data-target="deck-1">甲板 04.</button>
+                <button class="tab-btn" data-target="deck-2">甲板 05.</button>
+                <button class="tab-btn" data-target="deck-3">甲板 06.</button>
+                <button class="tab-btn" data-target="deck-4">甲板 07.</button>
+                <button class="tab-btn" data-target="deck-5">甲板 08.</button>
+                <button class="tab-btn" data-target="deck-6">甲板 09.</button>
+                <button class="tab-btn" data-target="deck-7">甲板 010.</button>
+                <button class="tab-btn" data-target="deck-8">甲板 011.</button>
+              </div>
+
+              <!-- Content -->
+              <div class="details-wrapper">
+                <div class="details active" id="deck-1">
+                  <img src="./images/sakura/deck/deck-1.png" alt="甲板 04." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div class="">
+                      <img src="./images/sakura/deck/deck.jpg" alt="富士餐廳" />
+                      <h4>富士餐廳</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-2">
+                  <img src="./images/sakura/deck/deck-4.png" alt="甲板 05." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="海洋俱樂部" />
+                      <h4>海洋俱樂部</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="海洋賭場" />
+                      <h4>海洋賭場</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="蔚藍泳池" />
+                      <h4>蔚藍泳池</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-3">
+                  <img src="./images/sakura/deck/deck-8.png" alt="甲板 06." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="按摩浴缸" />
+                      <h4>按摩浴缸</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="海洋劇場" />
+                      <h4>海洋劇場</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-4">
+                  <img src="./images/sakura/deck/deck-11.png" alt="甲板 07." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="棋牌室" />
+                      <h4>棋牌室</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="海洋精品店" />
+                      <h4>海洋精品店</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="三井廣場" />
+                      <h4>三井廣場</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-5">
+                  <img src="./images/sakura/deck/deck-15.png" alt="甲板 08." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="湖畔泳池" />
+                      <h4>湖畔泳池</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="湖畔餐廳" />
+                      <h4>湖畔餐廳</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="北齋高級餐廳" />
+                      <h4>北齋高級餐廳</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="八葉露臺餐廳" />
+                      <h4>八葉露臺餐廳</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-6">
+                  <img src="./images/sakura/deck/deck-20.png" alt="甲板 09." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="運動中心" />
+                      <h4>運動中心</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="健康中心" />
+                      <h4>健康中心</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="沙龍" />
+                      <h4>沙龍</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="治療室" />
+                      <h4>治療室</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-7">
+                  <img src="./images/sakura/deck/deck-25.png" alt="甲板 10." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="景觀酒吧36" />
+                      <h4>景觀酒吧36</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details" id="deck-8">
+                  <img src="./images/sakura/deck/deck-27.png" alt="甲板 11." class="dex-img" />
+
+                  <div class="deck-grid">
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="日出甲板" />
+                      <h4>日出甲板</h4>
+                    </div>
+                    <div>
+                      <img src="./images/sakura/deck/deck.jpg" alt="來光活動區" />
+                      <h4>來光活動區</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 三井海洋櫻花號-->
+      <section>
+        <div class="container sakura-introduce">
+          <div class="vessel-box">
+            <div class="row justify-content">
+              <div class="col-12 col-xl-8">
+                <div class="mitsui-title">
+                  <h2>MITSUI OCEAN SAKURA</h2>
+                  <div class="border-title2"></div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-8 pt-20">
+                <p>
+                  海上花季，正式啟航，包括客船時代在內，商船三井集團以逾一百四十年的歲月，
+                  持續為旅人描繪屬於海上的旅途風景。承襲這份百年航海精神的三井海洋櫻花號，以嶄新的姿態啟航，為旅人獻上一段真摯而動人的海上時光。
+                </p>
+                <p>
+                  全長不足二百公尺的靈巧船體，使她得以深入日本各地的港灣、離島與靜謐海域，引領旅人走近絕美海岸線與迷人港町。
+                  貼近自然、彷彿走入秘境般的航行時刻—— 那是唯有在郵輪旅程中，方能細細體會的獨特風景。
+                </p>
+                <p>
+                  同時，櫻花號也延續自「日本丸」三十五年累積而來的海上餐飲精髓。 由熟悉海上節奏的主廚團隊，以嚴選食材與細膩巧思，為旅途中的餐桌，
+                  添上一道道溫潤而富層次的風味。 全船客艙皆為海景套房，
+                  其中約九成配備私人陽台。再加上多處自在休憩的公共空間與開放式甲板，讓旅人在航程之中，隨時回到屬於自己的從容節奏。
+                  我們期望，這艘船能串連旅客與各地港灣，也連結人與人之間的情感。
+                  全體船員將以真誠之心迎接每一次相遇，為每一位旅人，獻上一段滿載邂逅與感動的海上旅程。
+                </p>
+              </div>
+            </div>
+            <div class="row justify-content sakura-py">
+              <div class="col-12 col-md-6 col-xl-3">
+                <img src="./images/sakura/vessel-2.jpg" alt="三井海洋櫻花號" />
+              </div>
+              <div class="col-11 col-md-6 col-xl-5 my-auto">
+                <div class="vessel-material">
+                  <!-- 1. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">艙房</dt>
+                    <dd class="top-cruise-profile__dd">229間</dd>
+                  </div>
+                  <!-- 2. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">載客數</dt>
+                    <dd class="top-cruise-profile__dd">458人</dd>
+                  </div>
+                  <!-- 3. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">長度</dt>
+                    <dd class="top-cruise-profile__dd">198.15米</dd>
+                  </div>
+                  <!-- 4. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">船寬</dt>
+                    <dd class="top-cruise-profile__dd">25.6米</dd>
+                  </div>
+                  <!-- 5. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">噸位數</dt>
+                    <dd class="top-cruise-profile__dd">32,447噸</dd>
+                  </div>
+                  <!-- 6. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">樓層</dt>
+                    <dd class="top-cruise-profile__dd">11層</dd>
+                  </div>
+                  <!-- 7. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">空間比</dt>
+                    <dd class="top-cruise-profile__dd">71</dd>
+                  </div>
+                  <!-- 7. -->
+                  <div class="top-cruise-profile__description-inner">
+                    <dt class="top-cruise-profile__dt">服務比</dt>
+                    <dd class="top-cruise-profile__dd">1.38</dd>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Q&A -->
+      <section>
+        <div class="pb-30">
+          <div class="mitsui-title mitsui-py">
+            <h2>Q&A</h2>
+            <div class="border-title2"></div>
+            <h4>相關問題</h4>
+          </div>
+          <div class="faq-container faq-w">
+            <!-- 問答 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                您可以根據出發地和其他條件選擇郵輪
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>MITSUI OCEAN SAKURAのクルーズから探す</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>東京</li>
+                      <li>橫濱</li>
+                      <li>名古屋</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 1-1 -->
+    <div class="modal js-modal" data-modal="1">
+      <div class="modal__inner">
+        <button class="button-close-modal js-close-modal">✕</button>
+        <div class="d-flex justify-content align-center">
+          <div class="modal-row">
+            <div class="col-12 d-flex justify-content d-title-wrap align-center">
+              <div class="modal-text">
+                <h2>餐飲和酒吧</h2>
+                <h4>FOOD AND DINING</h4>
+              </div>
+              <div class="line"></div>
+              <div class="my-auto">
+                <h3>隨時隨地，盡享美味。</h3>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <p>
+                日本的四季，不僅展現自然的絢麗之美，也傳遞出人們內心的溫暖與情感。<br />
+                我們精選來自日本各地的豐富時令食材，為您打造契合四季韻味的美食。<br />
+                無論您喜愛何種料理類型，都能在您心儀的氛圍中盡情品味。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-box customScroll pt-xl-10 pb-35">
+          <div class="modal-content-box">
+            <!-- 富士餐廳 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main1" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 4</h5>
+                    <h2>富士餐廳</h2>
+                    <h4>The Restaurant Fuji <span>餐廳</span></h4>
+                  </div>
+
+                  <div>
+                    <p class="content-p">
+                      作為主餐廳，我們為您提供全面的用餐體驗。菜單由主廚精心設計，將正宗日本料理與國際美食巧妙融合，滿足多元口味需求。
+                      並配備大面積景觀窗，讓您盡享奢華與舒適。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav1 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="富士餐廳" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 湖畔泳池餐廳＆酒吧 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main2" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 8</h5>
+                    <h2>湖畔泳池餐廳＆酒吧</h2>
+                    <h4>Poolside Restaurant & Bar Lakeside</h4>
+                  </div>
+                  <div>
+                    <p class="content-p">
+                      充滿度假氛圍的池畔餐廳，供應熱狗、披薩等豐富美食。 迎著清新的微風，享受全然放鬆的時刻。 並配備大面積景觀窗，讓您盡享奢華與舒適。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav2 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="湖畔泳池餐廳＆酒吧" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 八葉露台餐廳 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main3" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 8</h5>
+                    <h2>八葉露台餐廳</h2>
+                    <h4>Terrace Restaurant Hachiyo <span>自助餐廳</span></h4>
+                  </div>
+
+                  <div>
+                    <p class="content-p">
+                      這座面海而建的自助餐廳，位於開闊的空間中，匯聚全球多元美食， 為您帶來豐富的味蕾享受。
+                      <br />
+                      <span class="text-red">晚間我們另提供壽司菜單（需額外付費）。</span>
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav3 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="八葉露台餐廳" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 北齋高級餐廳 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main4" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 8</h5>
+                    <h2>北齋高級餐廳</h2>
+                    <h4>Hokusai FINE DINING <span>特色餐飲</span></h4>
+                  </div>
+
+                  <div>
+                    <p class="content-p">
+                      以葛飾北齋命名的特色餐廳，由名廚三國清三監製。我們精心 打造的七道式饗宴，融合時令食材，
+                      包含開胃小點、前菜、湯品、沙拉、主菜、甜點及花色小蛋糕。 您還可以依照個人喜好選擇菜餚數量與內容，享受專屬的晚餐體驗。
+                      <br />
+                      <span class="text-red">*需額外付費，並提前預約</span>
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav4 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="北齋高級餐廳" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 名廚 三國清三 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main5" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="名廚 三國清三" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>三井海洋富士號餐飲顧問</h5>
+                    <h2>名廚 三國清三</h2>
+                    <h4>Chef Kiyomi Mikuni</h4>
+                  </div>
+                  <div>
+                    <p class="content-p">
+                      很榮幸能受邀擔任三井海洋富士號的餐飲顧問。<br />
+                      過去我曾監製空中餐飲菜單，但這是我首次嘗試船上的餐飲體驗。<br />
+                      能夠為環遊日本及世界的旅客呈現我的料理，對我來說是一生難得的經歷。
+                      希望您能喜愛這份以三井海洋富士號為靈感，融合多樣在地特色食材的獨特菜單。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav5 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="名廚 三國清三" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井海洋廣場 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main6" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 7</h5>
+                    <h2>三井海洋廣場</h2>
+                    <h4>MITSUI OCEAN SQUARE <span>咖啡廳 </span></h4>
+                  </div>
+                  <div>
+                    <p class="content-p">這是一個舒適的空間，集前台、旅遊諮詢台與圖書館於一體。 我們提供多樣化的菜單，包括特製的金磚蛋糕與可頌等精緻美味。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav6 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="三井海洋廣場" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 觀景酒吧36 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main7" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 10</h5>
+                    <h2>觀景酒吧36</h2>
+                    <h4>OBSERVATION BAR 36 <span>特色餐飲</span></h4>
+                  </div>
+
+                  <div>
+                    <p class="content-p">
+                      此地以葛飾北齋的經典名作《富嶽三十六景》命名， 向這一藝術瑰寶致敬。 <br />
+                      您還可以品嚐以富士山為靈感製作的精緻手工雞尾酒， 以及日式風格的下午茶「玉手箱」，這份下午茶的設計初衷是
+                      希望為每位旅客帶來一段彷彿時光停駐的海上悠閒時光。
+
+                      <br />
+                      <span class="text-red">*下午茶需額外付費，並提前預約。</span>
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav7 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="觀景酒吧36" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 海洋俱樂部與酒吧 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main8" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="海洋俱樂部與酒吧" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="海洋俱樂部與酒吧" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 5</h5>
+                    <h2>海洋俱樂部與酒吧</h2>
+                    <h4>OCEAN CLUB AND BAR <span>酒吧</span></h4>
+                  </div>
+
+                  <div>
+                    <p class="content-p">
+                      提供多種威士忌與日本琴酒，還有依您喜好調製的琴湯尼與馬丁尼。 Craft Gin Cart 精選各種獨特食材，讓您享受專屬於自己的風味體驗。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav8 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="海洋俱樂部與酒吧" />
+                    <img class="lazyload" data-src="./images/sakura/restaurant/img-index.jpg" alt="海洋俱樂部與酒吧" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fyi">
+              <p>
+                酒精飲料需額外付費。<br />
+                船上設施和服務可能會發生變化。<br />
+                所有照片僅供參考。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 2-1 -->
+    <div class="modal js-modal" data-modal="modal-2">
+      <div class="modal__inner">
+        <button class="button-close-modal js-close-modal">✕</button>
+        <div class="d-flex justify-content align-center">
+          <div class="modal-row">
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <div class="modal-text">
+                <h2>套房</h2>
+                <h4>SUITES</h4>
+              </div>
+              <div class="line"></div>
+              <div>
+                <h3>
+                  甜美縈繞心間，<br />
+                  專屬於您的私密空間，伴隨迷人的海景
+                </h3>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <p>
+                我們提供七種不同的艙房類型，每一間都精心打造，將舒適與優雅完美融合，<br />
+                讓您在雅緻的空間中徹底放鬆身心。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-box customScroll pt-xl-10 pb-35">
+          <div class="modal-content-box">
+            <!-- 三井海洋尊爵套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7 my-auto">
+                  <div id="product-slider-main9" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 7</h5>
+                    <h2>三井海洋尊爵套房</h2>
+                    <h4>MITSUI OCEAN SUITE <span>24.93坪 / 2間</span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>管家服務</li>
+                    <li>按摩浴缸</li>
+                    <li>獨立日光浴室</li>
+                    <li>免治馬桶</li>
+                    <li>獨立客廳</li>
+                    <li>雙電視配置</li>
+                    <li>步入式衣櫥</li>
+                    <li>吧檯</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>
+                      我們寬敞的頂級艙房，讓您的身心徹底放鬆。<br />
+                      玻璃圍繞的日光房內還設有日光浴池，增添奢華享受。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav9 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海洋尊爵套房 " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井經典套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main10" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 7</h5>
+                    <h2>三井經典套房</h2>
+                    <h4>SIGNATURE SUITE <span>26.32坪 / 2間</span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>管家服務</li>
+                    <li>按摩浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>獨立客廳</li>
+                    <li>雙電視配置</li>
+                    <li>三處步入式衣櫥</li>
+                    <li>吧檯</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>
+                      這是一間面向船首的高級艙房，擁有船上最大面積，<br />
+                      並配備大面積景觀窗，讓您盡享奢華與舒適。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav10 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井經典套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井尊榮套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main11" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 6</h5>
+                    <h2>三井尊榮套房</h2>
+                    <h4>LUXURY SUITE <span>16.85至26.32坪 / 5間 </span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>管家服務</li>
+                    <li>按摩浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>獨立客廳</li>
+                    <li>雙電視配置</li>
+                    <li>兩處步入式衣櫥</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>共有五間優雅艙房，位於6層與8層甲板前方， 享有絕佳景觀。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav11 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井尊榮套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井頂級水療套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main12" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 10</h5>
+                    <h2>三井頂級水療套房</h2>
+                    <h4>PENTHOUSE SPA SUITE <span>14.76至14.94坪 / 4間 </span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>管家服務</li>
+                    <li>浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>獨立客廳</li>
+                    <li>雙電視配置</li>
+                    <li>兩處步入式衣櫥</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>唯一位於船尾的艙房，提供高層甲板的絕佳景觀。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav12 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級水療套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井頂級套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main13" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 9.10</h5>
+                    <h2>三井頂級套房</h2>
+                    <h4>PENTHOUSE SPA SUITE <span>14.76至14.94坪 / 4間 </span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>管家服務</li>
+                    <li>浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>獨立客廳</li>
+                    <li>雙電視配置</li>
+                    <li>步入式衣櫥</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>
+                      位於9層和10層甲板的高樓層，<br />
+                      這間雅緻空間將為您帶來賓至如歸的感受。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav13 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井頂級套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井陽台套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main14" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 5~10</h5>
+                    <h2>三井陽台套房</h2>
+                    <h4>VERANDA SUITE <span>7.99至9.14坪 / 167間 </span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>電視</li>
+                    <li>步入式衣櫥</li>
+                    <li>私人陽台</li>
+                  </ul>
+                  <div>
+                    <p>艙房都配有私人陽台，讓您盡享千變萬化的美景。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav14 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井陽台套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 三井海景套房 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main15" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 4</h5>
+                    <h2>三井海景套房</h2>
+                    <h4>OCEANVIEW SUITE <span>7.65至8.89坪 / 26間 </span></h4>
+                  </div>
+                  <ul class="modal-ul">
+                    <li>浴缸</li>
+                    <li>免治馬桶</li>
+                    <li>電視</li>
+                    <li>步入式衣櫥</li>
+                    <li>景觀窗 (不能開關)</li>
+                  </ul>
+                  <div>
+                    <p>艙房設有獨立的客廳與臥室，為您提供舒適愜意的住宿體驗。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav15 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+
+                    <img class="lazyload" data-src="./images/sakura/suite/img-index.jpg" alt="三井海景套房" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mitsui-title">
+            <h2>艙房設施與用品</h2>
+            <div class="border-title2"></div>
+            <h4>SERVE</h4>
+          </div>
+          <div class="faq-container">
+            <!-- 三井海洋尊爵套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井海洋尊爵套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>客廳</li>
+                      <li>步入式衣櫃</li>
+                      <li>獨立日光浴室</li>
+                      <li>日間床</li>
+                      <li>電視 (2)</li>
+                      <li>按摩浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>配備電熱水壺的咖啡機</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>於“北齋高級餐廳”用餐一次（每航程一次）</li>
+                      <li>洗衣服務<span style="font-size: 12px; vertical-align: super">*1</span></li>
+                      <li>於“富士餐廳”專屬區域用餐</li>
+                      <li>迎賓香檳（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井經典套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井經典套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>客廳</li>
+                      <li>三處步入式衣櫃</li>
+                      <li>電視 (2)</li>
+                      <li>按摩浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>配備電熱水壺的咖啡機</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>於“北齋高級餐廳”用餐一次（每航程一次））</li>
+                      <li>洗衣服務*1</li>
+                      <li>於“富士餐廳”專屬區域用餐</li>
+                      <li>迎賓香檳（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井尊榮套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井尊榮套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>客廳</li>
+                      <li>兩處步入式衣櫃</li>
+                      <li>電視 (2)</li>
+                      <li>按摩浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>配備電熱水壺的咖啡機</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>於“北齋高級餐廳”用餐一次（每航程一次））</li>
+                      <li>洗衣服務*1</li>
+                      <li>於“富士餐廳”專屬區域用餐</li>
+                      <li>迎賓香檳（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井頂級水療套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井頂級水療套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>起居區域</li>
+                      <li>兩處步入式衣櫃</li>
+                      <li>電視 (2)</li>
+                      <li>浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>配備電熱水壺的咖啡機</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>於“北齋高級餐廳”用餐一次（每航程一次））</li>
+                      <li>洗衣服務*1</li>
+                      <li>於“富士餐廳”專屬區域用餐</li>
+                      <li>迎賓香檳（一瓶，僅限登船當日）</li>
+                      <li>瑜珈課程（每航程一次）</li>
+                      <li>泰諾健設備（房內運動墊、彈力帶等僅限於艙房內使用）</li>
+                      <li>使用和諧休息室私人溫熱套房的權限（位於木靈水療與健康中心）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井頂級套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井頂級套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>起居區域</li>
+                      <li>步入式衣櫃</li>
+                      <li>電視 (2)</li>
+                      <li>浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>配備電熱水壺的咖啡機</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>於“北齋高級餐廳”用餐一次（每航程一次））</li>
+                      <li>洗衣服務*1</li>
+                      <li>於“富士餐廳”專屬區域用餐</li>
+                      <li>迎賓香檳（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井陽台套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井陽台套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>起居區域</li>
+                      <li>步入式衣櫃</li>
+                      <li>電視</li>
+                      <li>浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>電熱水壺</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>迎賓氣泡酒（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 三井海景套房 -->
+            <div class="mitsui-faq-item">
+              <button class="mitsui-faq-question">
+                三井海景套房
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <h3>設備</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>起居區域</li>
+                      <li>步入式衣櫃</li>
+                      <li>電視</li>
+                      <li>浴缸</li>
+                      <li>免治馬桶</li>
+                      <li>冰箱</li>
+                      <li>電熱水壺</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>特殊禮遇</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>迎賓氣泡酒（一瓶，僅限登船當日）</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <div class="faq-border"></div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <h3>客房服務</h3>
+                  </div>
+                  <div class="col-12 col-sm-9">
+                    <ul>
+                      <li>早餐（和式定食 / 西式餐點選擇）</li>
+                      <li>餐點選單（飲品另行收費）</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="warn">
+              <ul>
+                <li>※ 由於船體結構，部分客艙的視野可能會受到遮擋。</li>
+                <li>※ 無障礙艙房（408、519、619、715、813 和 913）配備無障礙淋浴間和馬桶，其餘艙房則配備浴缸和馬桶。</li>
+                <li>※ 請注意，海景套房不設有陽台。</li>
+                <li>※ 坪數為房間面積，陽台面積不包含在內。</li>
+                <li>※ 所有艙房（包括陽台）均為禁菸房，船上設有吸煙區。</li>
+                <li>※ 船上設施及客艙的名稱、設施及服務內容可能會有所變更。</li>
+                <li>※ 部分服務需額外收費。</li>
+              </ul>
+            </div>
+            <div class="spares">
+              <h2>相同設備與用品</h2>
+              <p>
+                保險箱、浴袍、沐浴露、洗髮精、潤髮乳、牙刷、原創托特包 <br />
+                拖鞋、吹風機、刮鬍刀、浴巾、瓶裝水（每人每日最多2瓶）
+              </p>
+            </div>
+          </div>
+          <div class="mitsui-title">
+            <h2>管家服務</h2>
+            <div class="border-title2"></div>
+            <h4>BUTLER SERVICE</h4>
+          </div>
+          <div class="service-container">
+            <div class="row">
+              <div class="col-12 my-auto">
+                <img src="./images/sakura/suite/img-index.jpg" alt="管家服務" />
+              </div>
+              <div class="col-12">
+                <h3>
+                  入住三井頂級套房或更高級套房的貴賓 <br />
+                  可享受以下管家服務，讓您的旅程更加舒適：
+                </h3>
+                <ul>
+                  <li>優先登船、下船及迎賓服務</li>
+                  <li>協助行李運送</li>
+                  <li>協助整理行李及打包</li>
+                  <li>擦鞋服務</li>
+                  <li>安排岸上觀光、付費餐廳、Spa等服務</li>
+                  <li>可將各餐廳的餐點送至艙房</li>
+                  <li>我們也將盡力滿足其他個別需求，請隨時告訴我們您的需求</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 3-1 -->
+    <div class="modal js-modal" data-modal="modal-3">
+      <div class="modal__inner">
+        <button class="button-close-modal js-close-modal">✕</button>
+        <div class="d-flex justify-content align-center">
+          <div class="modal-row">
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <div class="modal-text">
+                <h2>娛樂</h2>
+                <h4>ENTERTAINMENT</h4>
+              </div>
+              <div class="line"></div>
+              <div>
+                <h3>
+                  多樣化的娛樂活動，<br />
+                  滿足您的好奇心。
+                </h3>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <p>
+                我們設有舞台，用於舉辦各種精彩活動，還提供一個可以體驗賭場遊戲與紙牌遊戲的娛樂空間。<br />
+                藉由豐富多彩的娛樂體驗，我們為您帶來令人興奮且非凡的體驗。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-box customScroll pt-xl-10 pb-35">
+          <div class="modal-content-box">
+            <!-- 海洋劇場 / 海洋俱樂部與酒吧 / 海洋賭場 / 來光休閒區-->
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="ent-img">
+                  <img src="./images/sakura/ent/img-index.jpg" alt="海洋劇場" />
+                </div>
+                <div>
+                  <h2>海洋劇場</h2>
+                  <h4><span class="ent-deck">DECK 6</span>｜ OCEAN STAGE</h4>
+                </div>
+                <div>
+                  <p class="ent-p">
+                    三井海洋富士號的主舞台，真正意義上的海上舞台。 每晚都會上演多元化的表演，為您的旅程創造無盡的故事與感動，讓您沉浸在難忘的回憶中。
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="ent-img">
+                  <img src="./images/sakura/ent/img-index.jpg" alt="海洋俱樂部與酒吧" />
+                </div>
+                <div>
+                  <h2>海洋俱樂部與酒吧</h2>
+                  <h4><span class="ent-deck">DECK 5</span>｜ OCEAN CLUB AND BAR</h4>
+                </div>
+                <div>
+                  <p class="ent-p">感受現場音樂會的震撼、隨著舞會的節奏盡情起舞，或參加船上課程探索新知，盡享豐富而美好的時光。</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="ent-img">
+                  <img src="./images/sakura/ent/img-index.jpg" alt="海洋賭場" />
+                </div>
+                <div>
+                  <h2>海洋賭場</h2>
+                  <h4><span class="ent-deck">DECK 5</span>｜ OCEAN CASINO</h4>
+                </div>
+                <div>
+                  <p class="ent-p">
+                    您可以參加賭場遊戲活動，如輪盤、21點，以及麻將等趣味遊戲。
+                    <span class="text-red">※ 賭場遊戲中的籌碼和遊戲幣無法兌換現金，敬請知悉。</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="ent-img">
+                  <img src="./images/sakura/ent/img-index.jpg" alt="來光休閒區" />
+                </div>
+                <div>
+                  <h2>來光休閒區</h2>
+                  <h4><span class="ent-deck">DECK 11</span>｜ ACTIVITY AREA RAIKO</h4>
+                </div>
+
+                <div>
+                  <p class="ent-pt">您可以享受迷你高爾夫、甲板遊戲、桌球等多種娛樂活動。</p>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 棋牌室 -->
+            <div class="box-slider">
+              <div class="row pb-20">
+                <div class="col-12 col-sm-6 col-md-7">
+                  <div id="product-slider-main16" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+                    </div>
+
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 pt-sm-20 my-auto">
+                  <div>
+                    <h2>棋牌室</h2>
+                    <h4><span class="ent-deck">DECK 7</span>｜ ACTIVITY AREA RAIKO</h4>
+                  </div>
+                  <div>
+                    <p class="ent-pt">我們提供圍棋、將棋、桌遊、黑白棋等多種遊戲選擇。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav16 object-fit--contain pt-10">
+                    <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+
+                    <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+
+                    <img class="lazyload" data-src="./images/sakura/ent/img-index.jpg" alt="棋牌室" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4-1 -->
+    <div class="modal js-modal" data-modal="modal-4">
+      <div class="modal__inner">
+        <button class="button-close-modal js-close-modal">✕</button>
+        <div class="d-flex justify-content align-center">
+          <div class="modal-row">
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <div class="modal-text">
+                <h2>船上生活</h2>
+                <h4>LIFE ON BOARD</h4>
+              </div>
+              <div class="line"></div>
+              <div>
+                <h3>讓身心愉悅的放鬆時光</h3>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content d-title-wrap">
+              <p>遠離日常繁忙，享受船上專屬的悠閒與寧靜</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-box customScroll pt-xl-10 pb-35">
+          <div class="modal-content-box">
+            <!-- 木之靈SPA & 健康中心 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main17" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 9</h5>
+                    <h2>木之靈SPA & 健康中心</h2>
+                    <h4>SPA & WELNESS KODAMA<span>放鬆身心</span></h4>
+                  </div>
+                  <div>
+                    <p class="content-p">
+                      享受舒緩的水療護理、清爽的桑拿浴，或參加由專業指導的瑜伽或有氧運動課程，讓身心焕然一新。<br />
+                      <span class="text-red">*部分課程需額外付費。</span>
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav17 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="木之靈SPA & 健康中心" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 湖畔泳池 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main18" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 8</h5>
+                    <h2>湖畔泳池</h2>
+                    <h4>POOL KOHAN<span>泳池</span></h4>
+                  </div>
+                  <div>
+                    <p class="content-p">在泳池暢游一番，或躺在甲板椅上放鬆身心。 在這與自然景致融為一體的空間中，隨心享受屬於您的悠閒時光。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav18 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="湖畔泳池" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 日出甲板 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main19" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="日出甲板" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="日出甲板" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="日出甲板" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 11</h5>
+                    <h2>日出甲板</h2>
+                    <h4>SUNRISE DECK<span>戶外活動</span></h4>
+                  </div>
+                  <div>
+                    <p class="content-p">躺在甲板椅上，感受海風的輕拂，沐浴在柔和的陽光中，享受無比愜意的時刻。</p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav19 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="日出甲板" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="日出甲板" />
+                    <img class="lazyload" data-src="../images/sakura/life/img-index.jpg" alt="日出甲板" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="m-horizon" />
+            <!-- 海洋精品店 -->
+            <div class="box-slider">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-xxl-7">
+                  <div id="product-slider-main20" class="product-slider__main object-fit--contain">
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                    </div>
+                    <div class="zoom">
+                      <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xxl-5 pt-sm-20">
+                  <div>
+                    <h5>DECK 7</h5>
+                    <h2>海洋精品店</h2>
+                    <h4>OCEAN BOUTIQUE<span>購物</span></h4>
+                  </div>
+                  <div>
+                    <p class="content-p">
+                      在這場旅程中，發現獨特的文化與迷人的風景。海上精品店精心挑選各式商品供您選購。<br />
+                      將旅途中的美好記憶帶回家中，細細品味郵輪假期的餘韻與歡愉。
+                    </p>
+                  </div>
+                  <div id="product-slider__nav" class="product-slider-nav20 object-fit--contain">
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                    <img class="lazyload" data-src="./images/sakura/life/img-index.jpg" alt="海洋精品店" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="site-footer">
+      <div class="footer-nav">
+        <div class="container">
+          <div class="footer-nav-list mitsul-logo-2">
+            <img src="./images/logo/mitsul-sakura-logo-2.png" alt="MITSUI OCEAN CRUISES" />
+          </div>
+
+          <ul class="footer-nav-list footer-px">
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">三井海洋郵輪 台灣總代理</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">TEL：(02)2509-0838</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">FAX：(02)2518-5488</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">E-mail：judyyu@luxetravel.com.tw</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">10487台北市中山區南京東路三段101號9樓</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">Copyright &copy; <a href="#">Artisan</a> all rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const faqs = document.querySelectorAll(".mitsui-faq-item");
+
+      faqs.forEach((faq) => {
+        faq.querySelector(".mitsui-faq-question").addEventListener("click", () => {
+          faqs.forEach((item) => {
+            if (item !== faq) item.classList.remove("active");
+          });
+          faq.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- jQuery 必須最先載入 -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/script2.js"></script>
+    <script src="./js/theme2.js"></script>
+  </body>
+</html>
