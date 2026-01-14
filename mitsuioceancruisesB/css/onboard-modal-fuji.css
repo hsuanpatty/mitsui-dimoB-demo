@@ -1348,8 +1348,8 @@ input{
   grid-template-columns: repeat(4, 1fr);
   overflow: hidden;
 
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .deck-grid img {
@@ -1416,7 +1416,7 @@ input{
 }
 
 .vessel-box img {
-  width: 80%;
+  width: 95%;
   display: block;
   margin: auto;
 }
@@ -1441,7 +1441,6 @@ input{
 
 .vessel-box .border-title2 {
   margin: auto  0;
-  padding-bottom: 10px;
 }
 
 @media (max-width: 575.98px) {
@@ -1460,7 +1459,6 @@ input{
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3rem;
   row-gap: 1rem;
-  align-items: center;
 }
 
 /* 單一項目 */
@@ -1501,6 +1499,16 @@ input{
   margin: 0;
 }
 
+@media (min-width: 1400px) { 
+  .vessel-material {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 1rem;
+  align-items: center;
+  padding: 20px;
+}
+}
 
 @media (max-width: 768px) {
   .vessel-box img {
