@@ -395,6 +395,7 @@ section {
 }
 
 .mainVisual__brand {
+  padding: 50px 0 0 ;
   margin: auto;
   justify-content: center;
 }
@@ -423,6 +424,7 @@ section {
     width: 180px;
     border-bottom: 3px solid  var(--mitsui-blue);
     margin-bottom: 12px;
+    padding-top: 10px;
 }
 
 .mainVisual__box p {
@@ -446,11 +448,18 @@ section {
   background-repeat: repeat-y;
 }
 
+/*  */
+.grid-features {
+  display: grid;
+  grid-template-columns: 5fr 3fr 3fr;
+  gap: 2rem;
+}
+
 .bento-card {
   flex-direction: column;
   align-items: flex-start;
-
-  padding:  1.5rem 0;
+  min-height: 8rem;
+  padding: 1.5rem;
   display: flex;
   position: relative;
   background-color: #fff;
@@ -458,32 +467,20 @@ section {
   /* box-shadow: 0 20px 30px -10px rgb(16 16 39 / 7%); */
 }
 .bento-card.cloud {
-  min-height: auto;        
-  aspect-ratio: 3 / 3;    
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 3rem;
   overflow: hidden;
 }
+
+/* 底部照片 */
 .bento-card.cloud::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0;                      /* ⬅ 滿版關鍵 */
   background-image: url("../images/footprints-1.jpg");
-  background-size: cover;            
-  background-position: 40% 50%;  
+  background-size: cover;        /* 滿版裁切 */
+ background-position: 42% center;
   z-index: 0;
-  background-repeat: no-repeat;
-  
-}
-
-@media (min-width: 1400px) {
-  .img-my {
-    margin: auto 0;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .bento-card.cloud {
-    aspect-ratio: 5 / 3; 
-  } 
 }
 
 /* 讓文字在照片上層 */
@@ -515,14 +512,11 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 10px;
 }
 .bento-card h2 {
   font-weight: 400;
   font-size: 28px;
   letter-spacing: 0.2rem;
-  padding-bottom: 10px;
-  padding-left: 10px;
 }
 .bento-card h3 {
   font-weight: 600;
@@ -534,17 +528,64 @@ section {
   line-height: 30px;
 }
 
-.footprints {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* ⬅ 上下間距 */
+
+/* 1. 設定 grid-features 的欄位比例和 gap */
+.ach .grid-features {
+  display: grid;
+  gap: 2rem;
+  align-items: start; /* 讓左右區對齊上方 */
 }
 
-.footprints img {
+/* 2. 里程碑區域 */
+.ach .grid-features > .bento-card:first-child {
+  grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  height: 140px;          /* ⬅ 設定高度 */
-  object-fit: cover;     /* ⬅ 裁切不變形 */
-  display: block;
+  padding: 1.5rem 0;
+}
+
+/* 里程碑內部撐滿 */
+.ach .grid-features > .bento-card:first-child .mileage_box {
+  width: 100%;
+}
+
+/* 3. 圖片區域靠右 */
+.ach .grid-features > .bento-card:last-child {
+  grid-area: 1 / 2 / 2 / 4;
+  display: flex;
+}
+
+/* 4. 圖片垂直排列並靠右 */
+.ach .grid-features > .bento-card:last-child .footprints {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end; /* 圖片靠右對齊 */
+}
+
+/* 5. 圖片樣式 */
+.footprints img {
+  width: 100%;       
+  aspect-ratio: 30 / 9;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+@media (min-width: 1400px) {
+  .grid-features {
+    padding:  40px 120px 10px;
+  }
+  .ach .mainVisual__brand {
+        padding: 50px 0 ;
+  }
+  .mainVisual__brand .Visual-px {
+    padding: 0;
+  }
+   .mainVisual__brand .Visual-px2 {
+    padding: 0 60px;
+  }
 }
 
 
@@ -566,7 +607,7 @@ section {
 
   .image-box img {
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: cover;       /* 裁切並填滿 */
     object-position: 65% 0;
     display: block;
@@ -612,7 +653,7 @@ section {
   }
 
   .mainVisual__brand {
-    padding: 0 ;
+    padding: 40px 0 0 ;
   }
 
    .image-box {
@@ -641,6 +682,19 @@ section {
   .bento-card.logo {
       grid-area: auto ;
   }
+
+  .ach .grid-features {
+    display: block;
+  }
+
+  .ach .grid-features > .bento-card:first-child {
+     padding: 0;
+  }
+
+  .bento-card {
+    padding-bottom: 10px;
+  }
+
 }
 
 @media (max-width: 575.98px) {
@@ -648,7 +702,9 @@ section {
     padding: 0 0 20px;
   }
 
-
+   .mainVisual__brand {
+    padding: 30px 0 0 ;
+  }
 
   .footprints {
     padding-bottom: 20px;
@@ -656,10 +712,6 @@ section {
 
   .bento-card h2 {
     font-size: 24px;
-  }
-
-  .bento-card {
-    padding: 10px 0;
   }
 }
 
@@ -839,7 +891,6 @@ section {
   .mitsui-title h2 {
     font-size: 28px;
   }
-
 }
 
 /*重要里程碑  */
@@ -907,7 +958,7 @@ section {
 /* 單列項目 */
 .ach-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.75rem 0.75rem 0 0; 
   border-radius: 0.5rem;
   transition: all 0.2s ease;
@@ -978,7 +1029,14 @@ section {
   }
 }
 
+@media (max-width: 575.98px) {
+  .mileage_box {
+    padding: 1.5rem ;
+    margin-bottom: 10px;
+  }
 
+}
+ 
 
 
 /* ============================
